@@ -1,4 +1,4 @@
-const destination = [48.69692660883092, 44.50245328354335];
+const destination = [59.938631, 30.323037];
 const map = document.querySelector('#map');
 const link = 'https://api-maps.yandex.ru/2.1/?apikey=7c70a677-2343-4514-aa84-bc38e108561a&lang=ru_RU';
 const ymapsScript = document.createElement('script');
@@ -14,12 +14,16 @@ const init = () => {
     zoom: 13,
   });
 
-  const placemark = new ymaps.Placemark(myMap.getCenter(), {
-    iconLayout: 'default#image',
-    iconImageHref: './img/svg/location.svg',
-    iconImageSize: [18, 22],
-    iconImageOffset: [-9, -22],
-  });
+  const placemark = new ymaps.Placemark(
+      myMap.getCenter(),
+      {},
+      {
+        iconLayout: 'default#image',
+        iconImageHref: './img/svg/location.svg',
+        iconImageSize: [18, 22],
+        iconImageOffset: [-9, -11],
+      }
+  );
 
   myMap.geoObjects.add(placemark);
 };
@@ -37,7 +41,7 @@ function activateMapOnScroll() {
     executed = true;
     createScriptLink();
     ymapsScript.addEventListener('load', () => {
-      if (typeof ymaps !== 'undefined' && ymaps !== null) {
+      if (typeof ymaps !== 'undefined') {
         initMap();
       }
     });

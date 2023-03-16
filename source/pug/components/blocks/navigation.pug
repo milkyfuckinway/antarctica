@@ -1,0 +1,28 @@
+mixin navigation(burger)
+  -
+    const navigationList = [
+      {
+        href: "#advantages",
+        text: "Преимущества"
+      },
+      {
+        href: "#",
+        text: "Направления"
+      },
+      {
+        href: "#cruises",
+        text: "Ближайшие круизы"
+      },
+      {
+        href: "#contacts",
+        text: "Контакты"
+      },
+    ]
+
+  ul
+    each item in navigationList
+      li
+        if (burger=true)
+          a(href=item.href data-close-menu)=item.text
+        else
+          a(href=item.href)=item.text

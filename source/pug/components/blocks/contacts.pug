@@ -1,6 +1,32 @@
 mixin contacts()
-  section.contacts
+  -
+    const links = [
+      {
+        icon: 'location',
+        width: '18',
+        height: '22',
+        text: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8',
+        href: 'https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323037%2C59.938631&z=17'
+      }, {
+        icon: 'phone',
+        width: '18',
+        height: '18',
+        text: '8-800-200-00-00',
+        href: 'tel:+78002000000'
+      }
+    ]
+  section.contacts(id='contacts')
     .container
       h2.visually-hidden Контакты.
-      +map()
-
+      .contacts__map
+        +map()
+      .contacts__content
+        h3 У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
+        ul
+          each item in links
+            li
+              +icon(item.icon, item.width, item.height)
+              if(item.href)
+                a(href=item.href)=item.text
+              else
+                span=item.text

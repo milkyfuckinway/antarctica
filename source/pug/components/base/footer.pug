@@ -1,3 +1,5 @@
-mixin footer(footerMods)
-  footer.footer(class=footerMods)
+mixin footer
+  footer.footer
     .container
+      +logo()
+      +navigation()
