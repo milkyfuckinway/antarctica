@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {Burger} from './utils/burger';
 import {StickyHeader} from './utils/sticky-header';
+import {mapOnLoad} from './modules/map/map';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    mapOnLoad();
     const burger = new Burger();
     burger.init();
     const stickyHeader = new StickyHeader();

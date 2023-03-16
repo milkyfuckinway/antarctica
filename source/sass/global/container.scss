@@ -1,8 +1,8 @@
 .container {
-  width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
+  max-width: 1920px;
   padding: 0 40px;
+  width: 100%;
 
   @include vp-1439 {
     padding: 0 32px;
@@ -15,4 +15,9 @@
   @include vp-767 {
     padding: 0 16px;
   }
+}
+
+.map {
+  height: 400px;
+  width: 400px;
 }

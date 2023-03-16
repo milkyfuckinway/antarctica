@@ -858,10 +858,15 @@ button,
 }
 
 .container {
-  width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
+  max-width: 1920px;
   padding: 0 40px;
+  width: 100%;
+}
+
+.map {
+  height: 400px;
+  width: 400px;
 }
 
 .header {

@@ -1,0 +1,19 @@
+mixin booking()
+  section.booking
+    .container
+      .booking__content
+        h2 Раннее бронирование
+        P Забронируйте тур за&nbsp;3-6 месяцев&nbsp;до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+      .booking__form(data-callback="base" data-form-validate data-message-base="Сообщение")
+        form(action="https://echo.htmlacademy.ru" method="post")
+          div(class="booking__input" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="text")
+            input(name="name" data-focus type="text" aria-label="Введите имя." autocomplete="off" required placeholder="Имя")
+          div(class="booking__input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="phone")
+            input(name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон")
+          div(class="booking__input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="email")
+            input(name="email" type="email" aria-label="Введите ваш Email." autocomplete="off" required placeholder="Email")
+          div(class="booking__input booking__input--personal-data" data-message-base="Необходимо согласие" data-validate-type="checkbox")
+            input(id="personaldata" type="checkbox" checked required name='personaldata')
+            label(for="personaldata") Я согласен на обработку персональных данных
+          button(type='submit') Оставить заявку
+
