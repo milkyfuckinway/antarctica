@@ -1,0 +1,107 @@
+.advantages {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &::after {
+    @include graphic-retina("content/advantages/advantages", $color-alice-blue, "jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  &::before {
+    background-color: #e3ecf6;
+    z-index: -2;
+  }
+}
+
+.advantages .container {
+  padding-bottom: 120px;
+  padding-top: 110px;
+
+  @include vp-1023 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.advantages h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
+  @include vp-1023 {
+    margin-bottom: 60px;
+  }
+}
+
+.advantages ul {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+}
+
+.advantages li {
+  background-color: $color-alice-blue;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 240px;
+  padding: 30px;
+
+  @include vp-1023 {
+    padding: 25px 5px 25px 20px;
+  }
+}
+
+.advantages li svg {
+  margin-bottom: 8px;
+
+  @include vp-1023 {
+    display: flex;
+    height: 26px;
+    width: min-content;
+  }
+}
+
+.advantages h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 18px;
+  }
+}
+
+.advantages p {
+  font-size: 14px;
+  line-height: 140%;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+}
