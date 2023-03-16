@@ -18,17 +18,22 @@
 @import "global/container";
 @import "global/map";
 
+// Components
+// ---------------------------------
+
+@import "components/modal";
+@import "components/btn";
+@import "components/custom-input";
+@import "components/custom-toggle";
+@import "components/custom-select";
+
 // Blocks
 // ---------------------------------
 
 @import "blocks/header";
 @import "blocks/main-nav";
 @import "blocks/footer";
-@import "blocks/modal";
-@import "blocks/btn";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/about";
 
 // ---------------------------------
 

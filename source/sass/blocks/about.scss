@@ -1,0 +1,38 @@
+.about .container {
+  align-items: center;
+  column-gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 145px;
+  padding-top: 120px;
+
+  @include vp-1023 {
+    align-items: flex-start;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 85px;
+    padding-top: 65px;
+    row-gap: 50px;
+  }
+}
+
+.about h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 5px;
+}
