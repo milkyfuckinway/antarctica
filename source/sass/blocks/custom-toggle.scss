@@ -1,0 +1,120 @@
+.custom-toggle {
+  display: flex;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  padding: 14px 0 10px 36px;
+  position: relative;
+  width: 500px;
+
+  @media screen and (max-width: 767px) {
+    padding: 14px 0 10px 0;
+    width: 100%;
+  }
+
+  &:last-of-type {
+    padding: 14px 0 58px 36px;
+
+    @media screen and (max-width: 767px) {
+      padding: 14px 0 58px 0;
+    }
+  }
+
+  input {
+
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    width: 1px;
+  }
+
+  label {
+    cursor: pointer;
+    padding-left: 52px;
+    position: relative;
+
+    span {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  &--checkbox {
+    .custom-toggle__icon {
+      border: 1.5px solid #2c39f2;
+      height: 28px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: border 0.3s ease;
+      width: 28px;
+
+      &::before {
+        background-color: rgba(#2c39f2, 0);
+        content: "";
+        height: 20px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s ease;
+        width: 20px;
+      }
+    }
+  }
+
+  &--radio {
+    .custom-toggle__icon {
+      border: 1px solid #2c39f2;
+      border-radius: 50%;
+      height: 28px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: border 0.3s ease;
+      width: 28px;
+
+      &::before {
+        border-radius: 50%;
+        color: rgba(255, 255, 255, 0);
+        content: "";
+        height: 20px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: color 0.3s ease;
+        width: 20px;
+      }
+    }
+  }
+
+  input:checked + .custom-toggle__icon {
+    border: 1.5px solid #2c39f2;
+
+    &::before {
+      background-color: #2c39f2;
+    }
+  }
+
+  &.is-invalid {
+    label span {
+      color: #ff1553;
+    }
+  }
+
+  .input-message {
+    bottom: -5px;
+    position: absolute;
+    right: 0;
+
+    &--invalid {
+      color: #ff0000;
+    }
+
+    &--valid {
+      color: #15ab07;
+    }
+  }
+}

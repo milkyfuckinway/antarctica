@@ -1,0 +1,35 @@
+mixin advantages()
+  -
+    const advantagesCards = [
+      {
+        icon: 'ship-face',
+        iconWidth: '27',
+        iconHegith: '32',
+        title: 'Небольшой круизный лайнер',
+        text: 'Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.'
+      },
+      {
+        icon: 'checkmarks',
+        iconWidth: '38',
+        iconHegith: '32',
+        title: 'Система все включено',
+        text: 'Все наши круизы работают по системе «Все Включено». Великолепные блюда и безлимитный бар доступны для вас 24 часа.'
+      },
+      {
+        icon: 'ship-side',
+        iconWidth: '44',
+        iconHegith: '32',
+        title: 'Экскурсионные туры на Zodiac',
+        text: 'Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac c опытными экскурсоводами.'
+      }
+    ]
+
+  section.advantages(id='advantages')
+    .container
+      h2 Приемущества
+      ul
+        each item in advantagesCards
+          li
+            +icon(item.icon, item.iconWidth, item.iconHegith)
+            h3=item.title
+            p=item.text

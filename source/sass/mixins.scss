@@ -1,0 +1,218 @@
+// font-face
+
+@mixin font-face($family, $style, $weight, $file) {
+  @font-face {
+    font-display: swap;
+    font-family: "#{$family}";
+    font-style: $style;
+    font-weight: $weight;
+    src: url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.woff2") format("woff2");
+  }
+}
+
+// visually-hidden
+
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  -webkit-touch-callout: none;
+  user-select: none;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Оутлайн
+
+@mixin default-outline($outline-color: $color-default-white) {
+  border-radius: 2px;
+  outline: 2px solid $outline-color;
+  outline-offset: 2px;
+}
+
+// Фокус
+
+@mixin default-focus($outline-color) {
+  &:focus-visible {
+    @include default-outline($outline-color);
+    @content;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// Ховер
+
+@mixin default-states($outline-color: $color-default-white) {
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include default-focus($outline-color);
+}
+
+// ретина
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// css вебп
+
+@mixin graphic-webp($filename, $background-color: #000000, $extname: "jpg") {
+  $webp: url("./../img/#{$filename}.webp");
+
+  @supports (background-image: $webp) {
+    background-color: $background-color;
+    background-image: $webp;
+  }
+
+  @supports not (background-image: $webp) {
+    background-color: $background-color;
+    background-image: url("./../img/#{$filename}.#{$extname}");
+  }
+}
+
+// css ретина + вебп
+
+@mixin graphic-retina($filename, $background-color: #000000, $extname: "jpg") {
+  @include graphic-webp($filename, $background-color, $extname);
+
+  @include retina {
+    @include graphic-webp("#{$filename}@2x", $background-color, $extname);
+  }
+}
+
+// Миксины из сборки
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-1919 {
+  @media (max-width: ($vp-1920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: ($vp-375 - 1px)) {
+    @content;
+  }
+}
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

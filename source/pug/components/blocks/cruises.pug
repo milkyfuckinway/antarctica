@@ -1,0 +1,102 @@
+mixin cruises()
+  -
+    const cruisesList = [
+      {
+        name: '«Астория»',
+        route: 'Аргентина — Фолклендские острова — Антарктида',
+        departure: 'Ушуайя',
+        duration: '11 дней',
+        price: 'от 11500 $',
+        href: '#',
+        image: 'astoria'
+      },
+      {
+        name: '«Элайн»',
+        route: 'Аргентина — Фолклендские острова — Антарктида — Чили',
+        departure: 'Буэнос-Айрес',
+        duration: '20 дней',
+        price: 'от 14500 $',
+        href: '#',
+        image: 'elaine'
+      },
+      {
+        name: '«Атлантис»',
+        route: 'Южная Георгия и Южные Сандвичевы Острова — Антарктида',
+        departure: 'Ушуайя',
+        duration: '15 дней',
+        price: 'от 14500 $',
+        href: '#',
+        image: 'atlantis'
+      },
+      {
+        name: '«Одиссей»',
+        route: 'Чили — Антарктида',
+        departure: 'Пунта-Аренас',
+        duration: '13 дней',
+        price: 'от 9700 $',
+        href: '#',
+        image: 'odysseus'
+      },
+      {
+        name: '«Олимпия»',
+        route: 'Аргентина — Фолклендские острова — Южная Георгия — Антарктида',
+        departure: 'Ушуайя',
+        duration: '21 день',
+        price: 'от 18600 $',
+        href: '#',
+        image: 'olympia'
+      },
+      {
+        name: '«Аврора»',
+        route: 'Аргентина — Антарктида — Чили',
+        departure: 'Ушуайя',
+        duration: '14 дней',
+        price: 'от 11700 $',
+        href: '#',
+        image: 'aurora'
+      },
+      {
+        name: '«Леонор»',
+        route: 'Чили — Южная Георгия — Антарктида — Аргентина',
+        departure: 'Пунта-Аренас',
+        duration: '17 дней',
+        price: 'от 12500 $',
+        href: '#',
+        image: 'leonor'
+      },
+      {
+        name: '«Минион — 1»',
+        route: 'Аргентина — Антарктида',
+        departure: 'Ушуайя',
+        duration: '11 дней',
+        price: 'от 12300 $',
+        href: '#',
+        image: 'mignon'
+      },
+    ]
+
+  section.cruises(id='cruises')
+    .container
+      h2 Ближайшие круизы
+      ul
+        each item in cruisesList
+          li
+            .cruises__preview
+              h3=`Круиз ${item.name}`
+              +picture-responsive('content/cards', item.image, 'jpg', '260', '386', `Фото круиза ${item.name}.`)
+            .cruises__detail
+              p=`Круиз ${item.name}`
+              ul
+                li
+                  p Маршрут
+                  p=item.route
+                li
+                  p Порт отправления
+                  p=item.departure
+                li
+                  p Продолжительность
+                  p=item.duration
+                li
+                  p Цена
+                  p=item.price
+              a(href=item.href) Забронировать

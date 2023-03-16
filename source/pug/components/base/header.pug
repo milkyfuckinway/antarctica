@@ -1,0 +1,48 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#advantages",
+        text: "Преимущества"
+      },
+      {
+        href: "#",
+        text: "Направления"
+      },
+      {
+        href: "#cruises",
+        text: "Ближайшие круизы"
+      },
+      {
+        href: "#contacts",
+        text: "Контакты"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      .header__top(data-header)
+        if(currentUrl === "index.html")
+          span.logo.disabled
+            +icon('logo', 70, 38)
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную")
+            +icon('logo', 70, 38)
+        nav.main-nav
+          .main-nav__wrapper
+            if(currentUrl === "index.html")
+              span.logo.disabled
+                +icon('logo', 70, 38)
+            else
+              a.header__logo(href="index.html", aria-label="Переход на главную")
+                +icon('logo', 70, 38)
+            ul
+              each link in headerLinks
+                li
+                  a(href=link.href data-close-menu)=link.text
+        .header__overlap(data-close-menu)
+        button.header__button(data-burger)
+          span
+      .header__bottom
+        h1 Круизы в Антарктику
+        p Волшебный мир айсбергов и пингвинов
