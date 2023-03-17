@@ -1556,10 +1556,12 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-column-gap: 100px;
+  -moz-column-gap: 100px;
+  column-gap: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 100px;
   height: auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -2079,6 +2081,9 @@ button,
   }
 
   .header__top {
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
     padding: 30px 0;
   }
 
@@ -2101,6 +2106,7 @@ button,
   }
 
   .advantages h2 {
+    font-size: 26px;
     margin-bottom: 60px;
   }
 
@@ -2165,6 +2171,9 @@ button,
   }
 
   .header__top {
+    -webkit-column-gap: 25px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
     padding: 20px 0;
   }
 
@@ -2254,6 +2263,24 @@ button,
     padding-bottom: 85px;
     padding-top: 65px;
     row-gap: 50px;
+  }
+
+  .advantages .container {
+    padding-bottom: 65px;
+    padding-top: 65px;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+  }
+
+  .advantages ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages li {
+    padding: 25px 20px;
   }
 }
 
