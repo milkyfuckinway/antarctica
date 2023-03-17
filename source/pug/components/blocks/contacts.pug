@@ -18,8 +18,7 @@ mixin contacts()
   section.contacts(id='contacts')
     .container
       h2.visually-hidden Контакты.
-      .contacts__map
-        +map()
+      +map('contacts__map')
       .contacts__content
         h3 У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
         ul

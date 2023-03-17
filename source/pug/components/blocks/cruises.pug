@@ -3,7 +3,7 @@ mixin cruises()
     const cruisesList = [
       {
         name: '«Астория»',
-        route: 'Аргентина — Фолклендские острова — Антарктида',
+        route: 'Аргентина - Фолклендские острова - Антарктида',
         departure: 'Ушуайя',
         duration: '11 дней',
         price: 'от 11500 $',
@@ -12,7 +12,7 @@ mixin cruises()
       },
       {
         name: '«Элайн»',
-        route: 'Аргентина — Фолклендские острова — Антарктида — Чили',
+        route: 'Аргентина - Фолклендские острова - Антарктида - Чили',
         departure: 'Буэнос-Айрес',
         duration: '20 дней',
         price: 'от 14500 $',
@@ -21,7 +21,7 @@ mixin cruises()
       },
       {
         name: '«Атлантис»',
-        route: 'Южная Георгия и Южные Сандвичевы Острова — Антарктида',
+        route: 'Южная Георгия и Южные Сандвичевы Острова - Антарктида',
         departure: 'Ушуайя',
         duration: '15 дней',
         price: 'от 14500 $',
@@ -30,7 +30,7 @@ mixin cruises()
       },
       {
         name: '«Одиссей»',
-        route: 'Чили — Антарктида',
+        route: 'Чили - Антарктида',
         departure: 'Пунта-Аренас',
         duration: '13 дней',
         price: 'от 9700 $',
@@ -39,7 +39,7 @@ mixin cruises()
       },
       {
         name: '«Олимпия»',
-        route: 'Аргентина — Фолклендские острова — Южная Георгия — Антарктида',
+        route: 'Аргентина - Фолклендские острова - Южная Георгия - Антарктида',
         departure: 'Ушуайя',
         duration: '21 день',
         price: 'от 18600 $',
@@ -48,7 +48,7 @@ mixin cruises()
       },
       {
         name: '«Аврора»',
-        route: 'Аргентина — Антарктида — Чили',
+        route: 'Аргентина - Антарктида - Чили',
         departure: 'Ушуайя',
         duration: '14 дней',
         price: 'от 11700 $',
@@ -57,7 +57,7 @@ mixin cruises()
       },
       {
         name: '«Леонор»',
-        route: 'Чили — Южная Георгия — Антарктида — Аргентина',
+        route: 'Чили - Южная Георгия - Антарктида - Аргентина',
         departure: 'Пунта-Аренас',
         duration: '17 дней',
         price: 'от 12500 $',
@@ -65,8 +65,8 @@ mixin cruises()
         image: 'leonor'
       },
       {
-        name: '«Минион — 1»',
-        route: 'Аргентина — Антарктида',
+        name: '«Минион - 1»',
+        route: 'Аргентина - Антарктида',
         departure: 'Ушуайя',
         duration: '11 дней',
         price: 'от 12300 $',
@@ -78,12 +78,10 @@ mixin cruises()
   section.cruises(id='cruises')
     .container
       h2 Ближайшие круизы
-      ul
+      ul.cruises__list
         each item in cruisesList
           li
-            .cruises__preview
-              h3=`Круиз ${item.name}`
-              +picture-responsive('content/cards', item.image, 'jpg', '260', '386', `Фото круиза ${item.name}.`)
+
             .cruises__detail
               p=`Круиз ${item.name}`
               ul
@@ -100,3 +98,6 @@ mixin cruises()
                   p Цена
                   p=item.price
               a(href=item.href) Забронировать
+            .cruises__preview
+              h3=`Круиз ${item.name}`
+              +picture-responsive('content/cards', item.image, 'jpg', '260', '386', `Фото круиза ${item.name}.`)

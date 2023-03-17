@@ -1,0 +1,181 @@
+.cruises .container {
+  padding: 85px 47px;
+
+  @include vp-1023 {
+    padding: 90px 60px;
+  }
+
+  @include vp-767 {
+    padding: 57px 25px;
+  }
+}
+
+.cruises h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 59px;
+  text-align: center;
+
+  @include vp-1023 {
+    font-size: 26px;
+    margin-bottom: 49px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.cruises h3 {
+  align-items: flex-end;
+  color: $color-alice-blue;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  height: 100%;
+  line-height: 150%;
+  margin: 0;
+}
+
+.cruises__list {
+  display: grid;
+  gap: 30px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cruises__list > li {
+  min-height: 386px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+
+    .cruises__detail {
+      transform: translate(0);
+    }
+  }
+}
+
+.cruises__preview,
+.cruises__preview img,
+.cruises__preview::after {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cruises__preview {
+  padding: 22px 30px;
+  &::after {
+    background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+    content: "";
+    z-index: -1;
+  }
+
+  @include vp-1023 {
+    padding: 27px 35px;
+  }
+
+  @include vp-767 {
+    padding: 15px 25px;
+  }
+}
+
+.cruises__preview img {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.cruises__detail {
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  padding: 28px 25px 35px;
+  position: relative;
+  top: 0;
+  transform: translateX(calc(-100% - 10px));
+  transition: 0.15s $tf-linear;
+  width: 100%;
+  z-index: 2;
+
+  @include vp-1023 {
+    padding: 28px 35px 35px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 35px;
+  }
+}
+
+.cruises__detail ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 0;
+}
+
+.cruises__detail p {
+  margin: 0;
+}
+
+.cruises__detail > p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 15px;
+}
+
+.cruises__detail li p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.cruises__detail li p:not(:first-child) {
+  color: #d8d8d9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.cruises__detail a {
+  align-items: center;
+  background-color: $color-alice-blue;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 150%;
+  margin-top: auto;
+  min-height: 40px;
+  width: 100%;
+
+  @include default-states($color-alice-blue);
+}
