@@ -12,17 +12,18 @@ const init = () => {
   const myMap = new ymaps.Map('map', {
     center: destination,
     zoom: 13,
+    controls: ['zoomControl'],
   });
 
   const placemark = new ymaps.Placemark(
-      myMap.getCenter(),
-      {},
-      {
-        iconLayout: 'default#image',
-        iconImageHref: './img/svg/location.svg',
-        iconImageSize: [18, 22],
-        iconImageOffset: [-9, -11],
-      }
+    myMap.getCenter(),
+    {},
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/svg/location.svg',
+      iconImageSize: [18, 22],
+      iconImageOffset: [-9, -11],
+    }
   );
 
   myMap.geoObjects.add(placemark);
