@@ -9,6 +9,12 @@
     column-gap: 30px;
     padding: 100px 45px;
   }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
 }
 
 .contacts__map {
