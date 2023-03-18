@@ -21,6 +21,12 @@
   }
 }
 
+.header .container {
+  @include vp-767 {
+    padding: 0 8px 0 15px;
+  }
+}
+
 .header__top {
   align-items: center;
   column-gap: 100px;
@@ -36,7 +42,7 @@
 
   @include vp-767 {
     column-gap: 25px;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 
@@ -91,9 +97,10 @@
   border: 0;
   cursor: pointer;
   display: none;
-  height: 48px;
+  flex-shrink: 0;
+  height: 40px;
   padding: 0;
-  width: 48px;
+  width: 40px;
   z-index: 100;
 
   @include default-states;
@@ -112,7 +119,7 @@
     transform: translate(-50%);
     transition: $trans-default transform, $trans-default width, 0.5s background-color;
 
-    width: 50%;
+    width: 24px;
 
     &::before,
     &::after {

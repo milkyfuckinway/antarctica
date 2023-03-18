@@ -3,5 +3,15 @@
 }
 
 .footer .container {
+  align-items: center;
   display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  @include vp-767 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

@@ -88,19 +88,62 @@
 
 .main-nav--footer {
   display: flex;
-}
+  gap: 40px;
 
-.main-nav--footer .logo {
-  color: $color-alice-blue;
+  @include vp-1023 {
+    gap: 25px;
+  }
+  @include vp-767 {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .main-nav--footer ul {
+  align-items: center;
+  column-gap: 33px;
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include vp-1023 {
+    column-gap: 24px;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .main-nav--footer a {
-  @include default-states($color-alice-blue);
   color: $color-alice-blue;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+
+  @include default-states($color-alice-blue);
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.main-nav--footer .logo {
+  align-items: center;
+  color: $color-alice-blue;
+  display: flex;
+  height: auto;
+
+  & svg {
+    height: 38px;
+    width: 70px;
+
+    @include vp-1023 {
+      height: 20px;
+      width: 38px;
+    }
+  }
 }

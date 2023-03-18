@@ -8,7 +8,7 @@
   display: grid;
   gap: 40px;
   grid-template-columns: 1fr 1fr;
-  padding: 50px 92px;
+  padding: 51px 92px 50px;
 
   @include vp-1023 {
     display: flex;
@@ -54,6 +54,10 @@
   line-height: 150%;
   margin: 0;
   margin-bottom: 28px;
+
+  @include vp-767 {
+    text-align: center;
+  }
 }
 
 .booking__form form {
@@ -67,6 +71,10 @@
   padding: 50px;
   padding-top: 42px;
   width: 100%;
+
+  @include vp-767 {
+    padding: 40px 30px;
+  }
 }
 
 .booking__form button[type="submit"] {

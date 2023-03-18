@@ -6,19 +6,22 @@ mixin footer
       iconwidth: '12',
       iconheight: '20',
       href: '#',
+      aria: 'Ссылка на страницу в Одноклассниках.'
       },
       {
       icon: 'dzen',
       iconwidth: '20',
       iconheight: '20',
       href: '#',
+      aria: 'Ссылка на страницу в Яндекс Дзен.'
       },
       {
       icon: 'reddit',
       iconwidth: '20',
       iconheight: '20',
       href: '#',
-      }
+      aria: 'Ссылка на страницу в Реддит.'
+      },
     ]
 
   footer.footer
@@ -29,5 +32,5 @@ mixin footer
       ul.socials
         each item in socialsLinks
           li
-            a(href=item.href)
+            a(href=item.href aria-label=item.aria)
               +icon(item.icon, item.iconwidth, item.iconheight)
