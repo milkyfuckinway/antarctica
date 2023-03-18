@@ -65,7 +65,6 @@
   line-height: 20px;
 
   @include default-states($color-alice-blue);
-  @include default-focus($color-tangaroa);
 
   @include vp-1023 {
     font-size: 14px;
@@ -78,5 +77,6 @@
     line-height: 22px;
     padding: 10px 10px 10px 8px;
     width: 240px;
+    @include default-states($color-tangaroa);
   }
 }

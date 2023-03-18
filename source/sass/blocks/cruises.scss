@@ -1,5 +1,5 @@
 .cruises .container {
-  padding: 85px 47px;
+  padding: 85px 47px 120px;
 
   @include vp-1023 {
     padding: 90px 60px;
@@ -15,7 +15,7 @@
   font-weight: 600;
   line-height: 150%;
   margin: 0;
-  margin-bottom: 59px;
+  margin-bottom: 49px;
   text-align: center;
 
   @include vp-1023 {

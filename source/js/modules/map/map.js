@@ -16,14 +16,14 @@ const init = () => {
   });
 
   const placemark = new ymaps.Placemark(
-    myMap.getCenter(),
-    {},
-    {
-      iconLayout: 'default#image',
-      iconImageHref: './img/svg/location.svg',
-      iconImageSize: [18, 22],
-      iconImageOffset: [-9, -11],
-    }
+      myMap.getCenter(),
+      {},
+      {
+        iconLayout: 'default#image',
+        iconImageHref: './img/svg/location.svg',
+        iconImageSize: [18, 22],
+        iconImageOffset: [-9, -11],
+      }
   );
 
   myMap.geoObjects.add(placemark);

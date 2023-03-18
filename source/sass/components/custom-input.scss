@@ -1,56 +1,27 @@
 .custom-input,
 .custom-textarea {
   display: flex;
-  padding: 14px 0 28px;
+  padding: 0 0 20px 0;
   position: relative;
-  width: 530px;
+  width: 100%;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
-
-  label {
+  & label {
     align-items: center;
     display: flex;
     width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      flex-grow: 1;
-      margin-left: auto;
-      max-width: 300px;
-      min-height: 48px;
-      outline: none;
-      padding: 10px;
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
+  & input,
+  & textarea {
+    border: 0;
+    flex-grow: 1;
+    margin-left: auto;
+    min-height: 43px;
+    padding: 10px;
+    transition: border 0.3s ease;
+    width: 100%;
+    @include default-outline(transparent);
+    @include default-states($color-alice-blue);
   }
 
   &__error {
@@ -60,39 +31,36 @@
     position: absolute;
     right: 0;
     transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
   }
 
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      outline-color: #ff1553;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        outline-color: rgba(#ff1553, 0.5);
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      outline-color: #22b259;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        outline-color: rgba(#22b259, 0.5);
       }
     }
   }
 
   .input-message {
-    bottom: -5px;
+    font-size: 10px;
+    left: 0;
     position: absolute;
-    right: 0;
+    top: -22px;
 
     &--invalid {
       color: #ff0000;

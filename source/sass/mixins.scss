@@ -6,8 +6,7 @@
     font-family: "#{$family}";
     font-style: $style;
     font-weight: $weight;
-    src: url("../fonts/#{$file}.woff") format("woff"),
-      url("../fonts/#{$file}.woff2") format("woff2");
+    src: url("../fonts/#{$file}.woff") format("woff"), url("../fonts/#{$file}.woff2") format("woff2");
   }
 }
 
@@ -32,7 +31,6 @@
 // Оутлайн
 
 @mixin default-outline($outline-color: $color-default-white) {
-  border-radius: 2px;
   outline: 2px solid $outline-color;
   outline-offset: 2px;
 }
