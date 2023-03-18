@@ -1,5 +1,33 @@
 mixin footer
+  -
+    socialsLinks = [
+      {
+      icon: 'ok',
+      iconwidth: '12',
+      iconheight: '20',
+      href: '#',
+      },
+      {
+      icon: 'dzen',
+      iconwidth: '20',
+      iconheight: '20',
+      href: '#',
+      },
+      {
+      icon: 'reddit',
+      iconwidth: '20',
+      iconheight: '20',
+      href: '#',
+      }
+    ]
+
   footer.footer
     .container
-      +logo()
-      +navigation()
+      .main-nav.main-nav--footer
+        +logo()
+        +navigation()
+      ul.socials
+        each item in socialsLinks
+          li
+            a(href=item.href)
+              +icon(item.icon, item.iconwidth, item.iconheight)

@@ -32,7 +32,7 @@
 
   @include vp-1023 {
     padding-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 90px;
   }
 
   @include vp-767 {
@@ -51,7 +51,7 @@
 
   @include vp-1023 {
     font-size: 26px;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
   }
 
   @include vp-767 {
@@ -85,7 +85,7 @@
   padding: 30px;
 
   @include vp-1023 {
-    padding: 25px 5px 25px 20px;
+    padding: 25px 15px 20px 20px;
   }
 
   @include vp-767 {

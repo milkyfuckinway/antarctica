@@ -41,7 +41,7 @@
               <svg aria-hidden="true" width="70" height="38">
                 <use xlink:href="#logo"></use>
               </svg></span>
-            <nav class="main-nav">
+            <nav class="main-nav main-nav--header">
               <div class="main-nav__wrapper"><span class="logo disabled">
                   <svg aria-hidden="true" width="70" height="38">
                     <use xlink:href="#logo"></use>
@@ -71,7 +71,7 @@
         <section class="about">
           <div class="container">
             <div class="about__content">
-              <h2>Путешествие на&nbsp;край Земли</h2>
+              <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
               <p>
                 Это волшебное путешествие поможет вам познакомиться поближе
                 с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли,
@@ -99,7 +99,7 @@
                 <svg aria-hidden="true" width="38" height="32">
                   <use xlink:href="#checkmarks"></use>
                 </svg>
-                <h3>Система все включено</h3>
+                <h3>Система все включено</h3>
                 <p>Все наши круизы работают по системе «Все Включено». Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
               </li>
               <li>
@@ -387,23 +387,24 @@
           <div class="container">
             <div class="booking__content">
               <h2>Раннее бронирование</h2>
-              <P>Забронируйте тур за&nbsp;3-6 месяцев&nbsp;до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</P>
+              <P>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%</P>
             </div>
             <div class="form booking__form" data-callback="base" data-form-validate data-message-base="Сообщение">
               <form action="https://echo.htmlacademy.ru" method="post">
-                <div class="custom-input" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="text">
+                <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+                <div class="custom-input" data-limitation="name" data-required data-validate-type="text">
                   <input name="name" data-focus type="text" aria-label="Введите имя." autocomplete="off" required placeholder="Имя">
                 </div>
-                <div class="custom-input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="phone">
+                <div class="custom-input" data-required data-validate-type="phone">
                   <input name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон">
                 </div>
-                <div class="custom-input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="email">
+                <div class="custom-input" data-required data-validate-type="email">
                   <input name="email" type="email" aria-label="Введите ваш Email." autocomplete="off" required placeholder="Email">
                 </div>
-                <div class="custom-toggle custom-toggle--checkbox" data-message-base="Необходимо согласие" data-validate-type="checkbox">
+                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
                   <input id="personaldata" type="checkbox" checked required name="personaldata">
                   <div class="custom-toggle__icon"></div>
-                  <label for="personaldata">Я согласен на обработку персональных данных</label>
+                  <label for="personaldata">Я согласен на обработку моих персональных данных</label>
                 </div>
                 <button type="submit">Оставить заявку</button>
               </form>
@@ -420,7 +421,7 @@
                 <li>
                   <svg aria-hidden="true" width="18" height="22">
                     <use xlink:href="#location"></use>
-                  </svg><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323037%2C59.938631&amp;z=17">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</a>
+                  </svg><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323037%2C59.938631&amp;z=17">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</a>
                 </li>
                 <li>
                   <svg aria-hidden="true" width="18" height="18">
@@ -433,19 +434,35 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container"><span class="logo disabled">
-            <svg aria-hidden="true" width="70" height="38">
-              <use xlink:href="#logo"></use>
-            </svg></span>
-          <ul>
-            <li><a href="#advantages" data-close-menu>Преимущества</a>
-            </li>
-            <li><a href="#" data-close-menu>Направления</a>
-            </li>
-            <li><a href="#cruises" data-close-menu>Ближайшие круизы</a>
-            </li>
-            <li><a href="#contacts" data-close-menu>Контакты</a>
-            </li>
+        <div class="container">
+          <div class="main-nav main-nav--footer"><span class="logo disabled">
+              <svg aria-hidden="true" width="70" height="38">
+                <use xlink:href="#logo"></use>
+              </svg></span>
+            <ul>
+              <li><a href="#advantages" data-close-menu>Преимущества</a>
+              </li>
+              <li><a href="#" data-close-menu>Направления</a>
+              </li>
+              <li><a href="#cruises" data-close-menu>Ближайшие круизы</a>
+              </li>
+              <li><a href="#contacts" data-close-menu>Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="socials">
+            <li><a href="#">
+                <svg aria-hidden="true" width="12" height="20">
+                  <use xlink:href="#ok"></use>
+                </svg></a></li>
+            <li><a href="#">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="#dzen"></use>
+                </svg></a></li>
+            <li><a href="#">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="#reddit"></use>
+                </svg></a></li>
           </ul>
         </div>
       </footer>

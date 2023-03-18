@@ -14,14 +14,24 @@
   & input,
   & textarea {
     border: 0;
+    color: $color-tangaroa;
     flex-grow: 1;
+    font-size: 14px;
+    line-height: 150%;
     margin-left: auto;
     min-height: 43px;
-    padding: 10px;
-    transition: border 0.3s ease;
+    padding: 11px 16px;
+    transition: outline, opacity 0.3s ease;
     width: 100%;
+
     @include default-outline(transparent);
     @include default-states($color-alice-blue);
+
+    &::placeholder {
+      color: rgba($color-tangaroa, 0.7);
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 
   &__error {
@@ -57,13 +67,13 @@
   }
 
   .input-message {
-    font-size: 10px;
+    bottom: -2px;
+    font-size: 12px;
     left: 0;
     position: absolute;
-    top: -22px;
 
     &--invalid {
-      color: #ff0000;
+      color: #ff1553;
     }
 
     &--valid {

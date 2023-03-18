@@ -1,0 +1,13 @@
+.socials {
+  display: flex;
+  gap: 27px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socials a {
+  color: $color-alice-blue;
+
+  @include default-states($color-alice-blue);
+}

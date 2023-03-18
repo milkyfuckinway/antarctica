@@ -1,4 +1,7 @@
 .footer {
-  background-color: $color-neon-blue;
-  padding: 40px 0;
+  background-color: $color-tangaroa;
+}
+
+.footer .container {
+  display: flex;
 }

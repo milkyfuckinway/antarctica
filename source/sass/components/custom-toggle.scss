@@ -1,14 +1,24 @@
 .custom-toggle {
+  align-items: center;
   display: flex;
   font-size: 18px;
   font-weight: 300;
   line-height: 27px;
-  padding: 0 0 20px 0;
+  margin-right: 0 0 20px 0;
+  min-height: 18px;
   position: relative;
   width: 100%;
 
+  @include default-outline(transparent);
+  @include default-states($color-alice-blue);
+
+  &:focus-within,
+  &:active {
+    @include default-outline($color-alice-blue);
+  }
+
   &:last-of-type {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   & input {
@@ -21,7 +31,9 @@
 
   & label {
     cursor: pointer;
-    padding-left: 52px;
+    font-size: 10px;
+    line-height: 180%;
+    padding-left: 23px;
     position: relative;
 
     span {
@@ -41,20 +53,25 @@
       width: 18px;
 
       &::before {
-        background-color: rgba(#2c39f2, 0);
         background-image: url("./../../img/svg/custom-toggle-checkmark.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: 0%;
         content: "";
-        height: 20px;
+        height: 100%;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
         transition: background-size 0.3s ease;
-        width: 20px;
+        width: 100%;
       }
+    }
+  }
+
+  &--checkbox input:checked + .custom-toggle__icon {
+    &::before {
+      background-size: 60%;
     }
   }
 
@@ -84,15 +101,12 @@
     }
   }
 
-  & input:checked + .custom-toggle__icon {
-    &::before {
-      background-size: 50%;
-    }
-  }
-
   &.is-invalid {
-    label span {
-      color: #ff1553;
+    outline-color: #ff1553;
+
+    &:focus-within,
+    &:hover {
+      outline-color: rgba(#ff1553, 0.5);
     }
   }
 
