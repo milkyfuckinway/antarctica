@@ -985,9 +985,9 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .btn--red {
@@ -1028,8 +1028,15 @@ button,
 .custom-input textarea,
 .custom-textarea input,
 .custom-textarea textarea {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
   border: 0;
   color: #011c40;
+  cursor: text;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -1042,11 +1049,6 @@ button,
   -o-transition: outline, opacity 0.3s ease;
   transition: outline, opacity 0.3s ease;
   width: 100%;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
 }
 
 .custom-input input:hover,
@@ -1193,6 +1195,23 @@ button,
   width: 100%;
   outline: 2px solid transparent;
   outline-offset: 2px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+}
+
+.custom-toggle:hover {
+  opacity: 0.7;
+}
+
+.custom-toggle:active {
+  opacity: 0.5;
+}
+
+.custom-toggle:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
 }
 
 .custom-toggle:focus-within,
@@ -1222,41 +1241,26 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-}
-
-.custom-toggle label:hover {
-  opacity: 0.7;
-}
-
-.custom-toggle label:active {
-  opacity: 0.5;
-}
-
-.custom-toggle label:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 
 .custom-toggle--checkbox input + .custom-toggle__icon {
   background-color: #f9fbfd;
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
+  background-position: -12px;
   background-repeat: no-repeat;
-  background-size: 10px;
+  background-size: 12px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
-  -webkit-transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
-  -o-transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
-  transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
+  -o-transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
+  transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
   width: 18px;
 }
 
 .custom-toggle--checkbox input:checked + .custom-toggle__icon {
-  background-position: -100%;
+  background-position: center;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -1663,9 +1667,9 @@ button,
   pointer-events: none;
   position: absolute;
   top: 0;
-  -webkit-transition: 0.5s cubic-bezier(0, 2, 1, 1) background-color;
-  -o-transition: 0.5s cubic-bezier(0, 2, 1, 1) background-color;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) background-color;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
   width: 100%;
 }
 
@@ -1678,17 +1682,18 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.5s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform, 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
 }
 
 .header__top > .logo:not(.disabled) {
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .header__top > .logo:not(.disabled):hover {
@@ -1718,9 +1723,10 @@ button,
   padding: 0;
   width: 40px;
   z-index: 100;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .header__button:hover {
@@ -1752,11 +1758,11 @@ button,
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  -webkit-transition: 0.5s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.5s cubic-bezier(0, 2, 1, 1) transform, 0.5s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform, 0.5s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform, 0.5s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
   width: 24px;
 }
 
@@ -1767,11 +1773,11 @@ button,
   height: 2px;
   left: 0;
   position: absolute;
-  -webkit-transition: 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.5s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) transform, 0.5s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
   width: 24px;
 }
 
@@ -1812,9 +1818,9 @@ button,
 
 .main-nav--header {
   color: #f9fbfd;
-  -webkit-transition: 0.5s cubic-bezier(0, 2, 1, 1) max-width;
-  -o-transition: 0.5s cubic-bezier(0, 2, 1, 1) max-width;
-  transition: 0.5s cubic-bezier(0, 2, 1, 1) max-width;
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
   width: 100%;
 }
 
@@ -1846,9 +1852,10 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .main-nav--header a:hover {
@@ -1891,9 +1898,10 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .main-nav--footer a:hover {
@@ -2180,9 +2188,11 @@ button,
   -webkit-transform: translateX(calc(-100% - 10px));
   -ms-transform: translateX(calc(-100% - 10px));
   transform: translateX(calc(-100% - 10px));
-  -webkit-transition: 0.15s linear;
-  -o-transition: 0.15s linear;
-  transition: 0.15s linear;
+  -webkit-transition: 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
+  transition: 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
+  -o-transition: 0.4s transform cubic-bezier(0, 1, 0, 1);
+  transition: 0.4s transform cubic-bezier(0, 1, 0, 1);
+  transition: 0.4s transform cubic-bezier(0, 1, 0, 1), 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
   width: 100%;
   z-index: 2;
 }
@@ -2243,9 +2253,10 @@ button,
   margin-top: auto;
   min-height: 40px;
   width: 100%;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .cruises__detail a:hover {
@@ -2319,6 +2330,23 @@ button,
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+}
+
+.contacts a:hover {
+  opacity: 0.7;
+}
+
+.contacts a:active {
+  opacity: 0.5;
+}
+
+.contacts a:focus-visible {
+  outline: 2px solid #011c40;
+  outline-offset: 2px;
 }
 
 .contacts li svg {
@@ -2418,9 +2446,10 @@ button,
   min-height: 43px;
   padding: 0;
   width: 100%;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .booking__form button[type=submit]:hover {
@@ -2474,9 +2503,10 @@ button,
   justify-content: center;
   min-height: 25px;
   min-width: 25px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
 }
 
 .socials a:hover {
@@ -2998,9 +3028,10 @@ button,
     line-height: 22px;
     padding: 10px 10px 10px 8px;
     width: 240px;
-    -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-    -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-    transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+    cursor: pointer;
+    -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+    -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+    transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
   }
 
   .main-nav--header a:hover {
@@ -3021,6 +3052,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 22px;
     width: 100%;
   }
 
@@ -3032,6 +3064,12 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .main-nav--footer .logo svg {
+    height: 22px;
+    width: 42px;
   }
 
   .footer .container {
@@ -3042,6 +3080,9 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 19px;
+    padding-bottom: 35px;
+    padding-top: 40px;
   }
 
   .about .container {
@@ -3124,17 +3165,21 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 58px 15px 62px;
     row-gap: 40px;
   }
 
   .contacts__map {
     min-height: 316px;
     min-width: 290px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 
   .booking .container {
     gap: 35px;
-    padding: 59px 15px 100px;
+    padding: 59px 15px 72px;
   }
 
   .booking h2 {
@@ -3157,6 +3202,11 @@ button,
 
   .booking__form form {
     padding: 34px 30px;
+  }
+
+  .socials {
+    margin-left: -8px;
+    margin-right: 0;
   }
 }
 
