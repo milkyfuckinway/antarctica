@@ -1193,26 +1193,9 @@ button,
   width: 100%;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
 }
 
-.custom-toggle:hover {
-  opacity: 0.7;
-}
-
-.custom-toggle:active {
-  opacity: 0.5;
-}
-
-.custom-toggle:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
-}
-
-.custom-toggle:focus-within,
-.custom-toggle:active {
+.custom-toggle:focus-within {
   outline: 2px solid #f9fbfd;
   outline-offset: 2px;
 }
@@ -1234,6 +1217,22 @@ button,
   font-size: 10px;
   line-height: 13px;
   position: relative;
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+  transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
+}
+
+.custom-toggle label:hover {
+  opacity: 0.7;
+}
+
+.custom-toggle label:active {
+  opacity: 0.5;
+}
+
+.custom-toggle label:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon {
@@ -1245,17 +1244,13 @@ button,
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
-  -webkit-transition: outline 0.3s ease, background-size 0.3s ease;
-  -o-transition: outline 0.3s ease, background-size 0.3s ease;
-  transition: outline 0.3s ease, background-size 0.3s ease;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
   width: 18px;
 }
 
 .custom-toggle--checkbox input:checked + .custom-toggle__icon {
-  background-color: #f9fbfd;
-  background-image: url("./../img/svg/custom-toggle-checkmark.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 10px;
 }
 
