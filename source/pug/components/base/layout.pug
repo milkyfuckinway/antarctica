@@ -16,6 +16,11 @@ html(lang="ru")
     //- используйте только для шрифта находящегося на первом экране
     //- link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
 
+    link(href="./img/content/header/mobile/header-background@2x.webp" rel="preload" as="image" media="screen and (max-width: 767px) and (min-resolution: 1.5dppx)")
+    link(href="./img/content/header/mobile/header-background.webp" rel="preload" as="image" media="screen and (max-width: 767px) and (max-resolution: 1dppx)")
+    link(type="font/woff2" href="./fonts/montserrat-bold.woff2" rel="preload" as="font" crossorigin)
+    link(type="font/woff2" href="./fonts/montserrat-regular.woff2" rel="preload" as="font" crossorigin)
+
     link(rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png")
@@ -26,11 +31,7 @@ html(lang="ru")
     meta(name="msapplication-config" content="./favicon/browserconfig.xml")
     meta(name="theme-color" content="#ffffff")
 
-    link(type="font/woff2" href="./fonts/montserrat-bold.woff2" rel="preload" as="font" crossorigin)
-    link(type="font/woff2" href="./fonts/montserrat-regular.woff2" rel="preload" as="font" crossorigin)
 
-    link(href="./img/content/header/mobile/header-background@2x.webp" rel="preload" as="image" media="screen and (max-width: 767px) and (min-resolution: 1.5dppx)")
-    link(href="./img/content/header/mobile/header-background.webp" rel="preload" as="image" media="screen and (max-width: 767px) and (max-resolution: 1dppx)")
 
     //- При необходимости вы можете добавить разметку Open graf. - const Open graf = true
     if (openGraf)

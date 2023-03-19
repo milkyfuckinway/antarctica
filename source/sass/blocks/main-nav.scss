@@ -1,6 +1,5 @@
 .main-nav--header {
   color: $color-alice-blue;
-  transition: $trans-default max-width;
   width: 100%;
 
   @include vp-767 {
@@ -14,6 +13,10 @@
     top: 0;
     z-index: 1;
   }
+}
+
+.main-nav--transition {
+  transition: $trans-default max-width;
 }
 
 .is-open .main-nav--header {

@@ -5,7 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {Burger} from './utils/burger';
 import {StickyHeader} from './utils/sticky-header';
 import {activateMapOnScroll} from './modules/map/map';
-import {checkJs} from './utils/check-js';
+import {checkJs, addTransition} from './utils/check-js';
 
 // ---------------------------------
 
@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  iosVhFix();
   checkJs();
+  iosVhFix();
 
   // Modules
   // ---------------------------------
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    addTransition();
     initModals();
     activateMapOnScroll();
     const burger = new Burger();

@@ -10,12 +10,29 @@
 }
 
 .main-nav--header.no-js .main-nav__wrapper {
-  align-items: flex-end;
+  @include vp-767 {
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.main-nav--header.no-js .main-nav__wrapper ul {
+  @include vp-767 {
+    gap: 5px;
+  }
 }
 
 .main-nav--header.no-js li a {
-  @include default-states($color-alice-blue);
-  justify-content: flex-end;
+  @include vp-767 {
+    @include default-states($color-alice-blue);
+    font-size: 14px;
+    justify-content: flex-end;
+    line-height: 16px;
+    min-height: auto;
+    padding: 2px;
+  }
 }
 
 .header__button.no-js {

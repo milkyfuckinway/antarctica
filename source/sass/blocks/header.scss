@@ -186,13 +186,15 @@
     width: 0;
 
     &::before {
-      left: -12px;
+      left: -3px;
       transform: rotate(45deg);
+      width: 20px;
     }
 
     &::after {
-      left: -12px;
+      left: -3px;
       transform: rotate(-45deg);
+      width: 20px;
     }
   }
 }

@@ -1,5 +1,5 @@
-const BASE_COUNTRY_CODE = '+7';
-const BASE_MATRIX = ' (___) ___ __ __';
+const BASE_COUNTRY_CODE = '8';
+const BASE_MATRIX = '__________';
 const phoneLength = BASE_COUNTRY_CODE.length + BASE_MATRIX.length;
 
 const onInputPhoneInput = ({target}) => {
@@ -32,7 +32,7 @@ const onFocusPhoneInput = ({target}) => {
 };
 
 const onKeydownPhoneInput = (e) => {
-  if (e.target.selectionStart === 1 && e.keyCode === 8 || e.keyCode === 46) {
+  if ((e.target.selectionStart === 1 && e.keyCode === 8) || e.keyCode === 46) {
     e.preventDefault();
   }
   if (e.target.selectionStart <= phoneLength && e.keyCode !== 8 && e.keyCode !== 46 && e.keyCode !== 37 && e.keyCode !== 39) {

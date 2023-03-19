@@ -5,4 +5,10 @@ const checkJs = () => {
   });
 };
 
-export {checkJs};
+const burgerMenu = document.querySelector('.main-nav--header');
+
+const addTransition = () => {
+  burgerMenu.classList.add('main-nav--transition');
+};
+
+export {checkJs, addTransition};
