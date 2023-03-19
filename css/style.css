@@ -1217,6 +1217,10 @@ button,
   font-size: 10px;
   line-height: 13px;
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
   -o-transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
   transition: opacity 0.5s cubic-bezier(0, 2, 1, 1);
