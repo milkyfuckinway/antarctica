@@ -12,12 +12,21 @@
   }
 
   &::after {
-    @include graphic-retina("content/advantages/advantages", $color-alice-blue, "jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.1;
     z-index: -1;
+
+    @include graphic-retina("content/advantages/desktop/advantages", $color-alice-blue, "jpg");
+
+    @include vp-1023 {
+      @include graphic-retina("content/advantages/tablet/advantages", $color-alice-blue, "jpg");
+    }
+
+    @include vp-767 {
+      @include graphic-retina("content/advantages/mobile/advantages", $color-alice-blue, "jpg");
+    }
   }
 
   &::before {

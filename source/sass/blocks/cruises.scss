@@ -44,18 +44,18 @@
   display: grid;
   gap: 30px;
   grid-auto-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, calc((100% - 90px) / 4));
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, calc((100% - 30px) / 2));
   }
 
   @include vp-767 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 

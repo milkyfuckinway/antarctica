@@ -2338,29 +2338,85 @@ button,
   opacity: 0.1;
   z-index: -1;
 }
-@supports (background-image: url("./../img/content/advantages/advantages.webp")) {
+@supports (background-image: url("./../img/content/advantages/desktop/advantages.webp")) {
   .advantages::after {
     background-color: #f9fbfd;
-    background-image: url("./../img/content/advantages/advantages.webp");
+    background-image: url("./../img/content/advantages/desktop/advantages.webp");
   }
 }
-@supports not (background-image: url("./../img/content/advantages/advantages.webp")) {
+@supports not (background-image: url("./../img/content/advantages/desktop/advantages.webp")) {
   .advantages::after {
     background-color: #f9fbfd;
-    background-image: url("./../img/content/advantages/advantages.jpg");
+    background-image: url("./../img/content/advantages/desktop/advantages.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  @supports (background-image: url("./../img/content/advantages/advantages@2x.webp")) {
+  @supports (background-image: url("./../img/content/advantages/desktop/advantages@2x.webp")) {
     .advantages::after {
       background-color: #f9fbfd;
-      background-image: url("./../img/content/advantages/advantages@2x.webp");
+      background-image: url("./../img/content/advantages/desktop/advantages@2x.webp");
     }
   }
-  @supports not (background-image: url("./../img/content/advantages/advantages@2x.webp")) {
+  @supports not (background-image: url("./../img/content/advantages/desktop/advantages@2x.webp")) {
     .advantages::after {
       background-color: #f9fbfd;
-      background-image: url("./../img/content/advantages/advantages@2x.jpg");
+      background-image: url("./../img/content/advantages/desktop/advantages@2x.jpg");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  @supports (background-image: url("./../img/content/advantages/tablet/advantages.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/tablet/advantages.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/advantages/tablet/advantages.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/tablet/advantages.jpg");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  @supports (background-image: url("./../img/content/advantages/tablet/advantages@2x.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/tablet/advantages@2x.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/advantages/tablet/advantages@2x.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/tablet/advantages@2x.jpg");
+    }
+  }
+}
+@media (max-width: 767px) {
+  @supports (background-image: url("./../img/content/advantages/mobile/advantages.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/mobile/advantages.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/advantages/mobile/advantages.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/mobile/advantages.jpg");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  @supports (background-image: url("./../img/content/advantages/mobile/advantages@2x.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/mobile/advantages@2x.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/advantages/mobile/advantages@2x.webp")) {
+    .advantages::after {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/advantages/mobile/advantages@2x.jpg");
     }
   }
 }
@@ -2553,25 +2609,22 @@ button,
   display: grid;
   gap: 30px;
   grid-auto-rows: 1fr;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, calc((100% - 90px) / 4));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 @media (max-width: 1023px) {
   .cruises__list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, calc((100% - 30px) / 2));
   }
 }
 @media (max-width: 767px) {
   .cruises__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 
@@ -2879,29 +2932,85 @@ button,
 .booking {
   background-size: cover;
 }
-@supports (background-image: url("./../img/content/booking/booking.webp")) {
+@supports (background-image: url("./../img/content/booking/desktop/booking.webp")) {
   .booking {
     background-color: #f9fbfd;
-    background-image: url("./../img/content/booking/booking.webp");
+    background-image: url("./../img/content/booking/desktop/booking.webp");
   }
 }
-@supports not (background-image: url("./../img/content/booking/booking.webp")) {
+@supports not (background-image: url("./../img/content/booking/desktop/booking.webp")) {
   .booking {
     background-color: #f9fbfd;
-    background-image: url("./../img/content/booking/booking.jpg");
+    background-image: url("./../img/content/booking/desktop/booking.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  @supports (background-image: url("./../img/content/booking/booking@2x.webp")) {
+  @supports (background-image: url("./../img/content/booking/desktop/booking@2x.webp")) {
     .booking {
       background-color: #f9fbfd;
-      background-image: url("./../img/content/booking/booking@2x.webp");
+      background-image: url("./../img/content/booking/desktop/booking@2x.webp");
     }
   }
-  @supports not (background-image: url("./../img/content/booking/booking@2x.webp")) {
+  @supports not (background-image: url("./../img/content/booking/desktop/booking@2x.webp")) {
     .booking {
       background-color: #f9fbfd;
-      background-image: url("./../img/content/booking/booking@2x.jpg");
+      background-image: url("./../img/content/booking/desktop/booking@2x.jpg");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  @supports (background-image: url("./../img/content/booking/tablet/booking.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/tablet/booking.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/booking/tablet/booking.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/tablet/booking.jpg");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  @supports (background-image: url("./../img/content/booking/tablet/booking@2x.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/tablet/booking@2x.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/booking/tablet/booking@2x.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/tablet/booking@2x.jpg");
+    }
+  }
+}
+@media (max-width: 767px) {
+  @supports (background-image: url("./../img/content/booking/mobile/booking.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/mobile/booking.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/booking/mobile/booking.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/mobile/booking.jpg");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  @supports (background-image: url("./../img/content/booking/mobile/booking@2x.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/mobile/booking@2x.webp");
+    }
+  }
+  @supports not (background-image: url("./../img/content/booking/mobile/booking@2x.webp")) {
+    .booking {
+      background-color: #f9fbfd;
+      background-image: url("./../img/content/booking/mobile/booking@2x.jpg");
     }
   }
 }
@@ -2933,7 +3042,7 @@ button,
 @media (max-width: 767px) {
   .booking .container {
     gap: 35px;
-    padding: 59px 15px 72px;
+    padding: 59px 15px 66px;
   }
 }
 
@@ -3013,7 +3122,7 @@ button,
 }
 @media (max-width: 767px) {
   .booking__form form {
-    padding: 34px 30px;
+    padding: 34px 30px 40px;
   }
 }
 

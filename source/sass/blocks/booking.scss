@@ -1,6 +1,15 @@
 .booking {
-  @include graphic-retina("content/booking/booking", $color-alice-blue, "jpg");
   background-size: cover;
+
+  @include graphic-retina("content/booking/desktop/booking", $color-alice-blue, "jpg");
+
+  @include vp-1023 {
+    @include graphic-retina("content/booking/tablet/booking", $color-alice-blue, "jpg");
+  }
+
+  @include vp-767 {
+    @include graphic-retina("content/booking/mobile/booking", $color-alice-blue, "jpg");
+  }
 }
 
 .booking .container {
@@ -19,7 +28,7 @@
 
   @include vp-767 {
     gap: 35px;
-    padding: 59px 15px 72px;
+    padding: 59px 15px 66px;
   }
 }
 
@@ -87,7 +96,7 @@
   width: 100%;
 
   @include vp-767 {
-    padding: 34px 30px;
+    padding: 34px 30px 40px;
   }
 }
 
