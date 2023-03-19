@@ -1245,7 +1245,7 @@ button,
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 2px;
+  background-size: 0.001px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
