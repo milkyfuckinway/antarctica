@@ -1,14 +1,14 @@
 mixin header
-  header.header(class=headerMods)
+  header.header()
     .container
-      .header__top(data-header)
+      .header__top.no-js(data-header)
         +logo()
-        nav.main-nav.main-nav--header
+        nav.main-nav.main-nav--header.no-js
           .main-nav__wrapper
             +logo()
             +navigation(burger)
         .header__overlap(data-close-menu)
-        button.header__button(data-burger aria-label='Открыть или закрыть меню.')
+        button.header__button.no-js(data-burger aria-label='Открыть или закрыть меню.')
           span
       .header__bottom
         h1 Круизы в&nbsp;Антарктику

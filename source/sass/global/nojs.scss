@@ -1,0 +1,35 @@
+.main-nav--header.no-js {
+  @include vp-767 {
+    background-color: transparent;
+    color: $color-alice-blue;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.main-nav--header.no-js .main-nav__wrapper {
+  align-items: flex-end;
+}
+
+.main-nav--header.no-js li a {
+  @include default-states($color-alice-blue);
+  justify-content: flex-end;
+}
+
+.header__button.no-js {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header__top.no-js > .logo {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.contacts__map.no-js {
+  @include graphic-webp("./content/map/map", #e9eeee, "jpg");
+}

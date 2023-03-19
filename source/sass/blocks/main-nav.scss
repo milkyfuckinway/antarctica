@@ -26,10 +26,10 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    gap: 27px;
     height: 100%;
     overflow: auto;
-    padding: 20px 30px 20px 15px;
+    padding: 20px 30px 20px 17px;
   }
 }
 
@@ -39,7 +39,11 @@
 
   @include vp-767 {
     display: block;
-    width: max-content;
+
+    & svg {
+      height: 22px;
+      width: 42px;
+    }
   }
 }
 
@@ -78,7 +82,8 @@
   @include vp-767 {
     display: flex;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 20px;
+    min-height: 40px;
     padding: 10px 10px 10px 8px;
     width: 240px;
 

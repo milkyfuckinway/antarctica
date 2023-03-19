@@ -5,6 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {Burger} from './utils/burger';
 import {StickyHeader} from './utils/sticky-header';
 import {activateMapOnScroll} from './modules/map/map';
+import {checkJs} from './utils/check-js';
 
 // ---------------------------------
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  checkJs();
 
   // Modules
   // ---------------------------------

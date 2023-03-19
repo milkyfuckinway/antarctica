@@ -11,7 +11,7 @@ window.addEventListener('scroll', activateMapOnScroll);
 const init = () => {
   const myMap = new ymaps.Map('map', {
     center: destination,
-    zoom: 13,
+    zoom: 15,
     controls: ['zoomControl'],
   });
 
