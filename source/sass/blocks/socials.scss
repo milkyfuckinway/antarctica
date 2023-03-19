@@ -1,6 +1,7 @@
 .socials {
   align-items: center;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
   height: 100%;
@@ -20,6 +21,7 @@
   @include vp-767 {
     margin-left: -8px;
     margin-right: 0;
+    max-width: 100%;
   }
 }
 
