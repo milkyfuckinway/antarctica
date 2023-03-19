@@ -1235,7 +1235,7 @@ button,
   outline-offset: 2px;
 }
 
-.custom-toggle--checkbox .custom-toggle__icon {
+.custom-toggle--checkbox input + .custom-toggle__icon {
   background-color: #f9fbfd;
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
@@ -2889,7 +2889,7 @@ button,
     line-height: 12px;
   }
 
-  .custom-toggle--checkbox .custom-toggle__icon {
+  .custom-toggle--checkbox input + .custom-toggle__icon {
     height: 20px;
     width: 20px;
   }
