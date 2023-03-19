@@ -1185,6 +1185,7 @@ button,
   display: flex;
   font-size: 18px;
   font-weight: 300;
+  gap: 5px;
   line-height: 27px;
   margin-right: 0 0 20px 0;
   min-height: 18px;
@@ -1231,48 +1232,26 @@ button,
 .custom-toggle label {
   cursor: pointer;
   font-size: 10px;
-  line-height: 180%;
-  padding-left: 23px;
+  line-height: 13px;
   position: relative;
-}
-
-.custom-toggle label span {
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon {
   background-color: #f9fbfd;
-  height: 18px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transition: outline 0.3s ease;
-  -o-transition: outline 0.3s ease;
-  transition: outline 0.3s ease;
-  width: 18px;
-}
-
-.custom-toggle--checkbox .custom-toggle__icon::before {
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0%;
-  content: "";
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: background-size 0.3s ease;
-  -o-transition: background-size 0.3s ease;
-  transition: background-size 0.3s ease;
-  width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 18px;
+  -webkit-transition: outline, background-size 0.3s ease;
+  -o-transition: outline, background-size 0.3s ease;
+  transition: outline, background-size 0.3s ease;
+  width: 18px;
 }
 
-.custom-toggle--checkbox input:checked + .custom-toggle__icon::before {
+.custom-toggle--checkbox input:checked + .custom-toggle__icon {
   background-size: 60%;
 }
 
@@ -1641,6 +1620,20 @@ button,
   }
 }
 
+.header h1 {
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
 .header__top {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1811,20 +1804,6 @@ button,
 
 .header__bottom {
   padding: 162px 95px;
-}
-
-.header__bottom h1 {
-  font-size: 54px;
-  line-height: 66px;
-  margin: 0;
-  margin-bottom: 12px;
-}
-
-.header__bottom p {
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0;
-  margin-bottom: 12px;
 }
 
 .main-nav--header {
@@ -2663,11 +2642,21 @@ button,
     min-height: 638px;
   }
 
+  .header h1 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .header p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   .header__top {
     -webkit-column-gap: 50px;
     -moz-column-gap: 50px;
     column-gap: 50px;
-    padding: 28px 0;
+    padding: 28px;
   }
 
   .header__top > .logo svg {
@@ -2677,16 +2666,6 @@ button,
 
   .header__bottom {
     padding: 187px 0;
-  }
-
-  .header__bottom h1 {
-    font-size: 50px;
-    line-height: 61px;
-  }
-
-  .header__bottom p {
-    font-size: 18px;
-    line-height: 22px;
   }
 
   .main-nav--header ul {
@@ -2901,8 +2880,33 @@ button,
     width: 100%;
   }
 
+  .custom-toggle:last-of-type {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .custom-toggle label {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .custom-toggle--checkbox .custom-toggle__icon {
+    height: 20px;
+    width: 20px;
+  }
+
   .header {
     min-height: 500px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .header p {
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .header .container {
@@ -2913,7 +2917,7 @@ button,
     -webkit-column-gap: 25px;
     -moz-column-gap: 25px;
     column-gap: 25px;
-    padding: 10px 0;
+    padding: 10px 0 0 3px;
   }
 
   .header__top.is-open .header__overlap {
@@ -2932,6 +2936,10 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .header__bottom {
+    padding: 126px 0;
   }
 
   .main-nav--header {
@@ -3044,17 +3052,23 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding-bottom: 85px;
-    padding-top: 65px;
-    row-gap: 50px;
+    padding-top: 57px;
+    row-gap: 28px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+    line-height: 34px;
   }
 
   .advantages .container {
     padding-bottom: 65px;
-    padding-top: 65px;
+    padding-top: 57px;
   }
 
   .advantages h2 {
     font-size: 24px;
+    margin-bottom: 30px;
   }
 
   .advantages ul {
@@ -3063,11 +3077,17 @@ button,
   }
 
   .advantages li {
-    padding: 25px 20px;
+    gap: 9px;
+    min-height: 250px;
+    padding: 25px 20px 0;
+  }
+
+  .advantages h3 {
+    max-width: 80%;
   }
 
   .cruises .container {
-    padding: 57px 25px;
+    padding: 57px 25px 64px;
   }
 
   .cruises h2 {
@@ -3081,11 +3101,15 @@ button,
   }
 
   .cruises__preview {
-    padding: 15px 25px;
+    padding: 18px 25px;
   }
 
   .cruises__detail {
     padding: 30px 25px 35px;
+  }
+
+  .cruises__detail {
+    padding-top: 28px;
   }
 
   .contacts .container {
@@ -3100,16 +3124,30 @@ button,
   }
 
   .booking .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    gap: 35px;
+    padding: 59px 15px 100px;
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 14px;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
   }
 
   .booking h3 {
+    font-size: 18px;
+    line-height: 25px;
     text-align: center;
   }
 
   .booking__form form {
-    padding: 40px 30px;
+    padding: 34px 30px;
   }
 }
 
