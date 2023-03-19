@@ -1955,9 +1955,6 @@ button,
 
 .main-nav--header {
   color: #f9fbfd;
-  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -1972,6 +1969,12 @@ button,
     top: 0;
     z-index: 1;
   }
+}
+
+.main-nav--transition {
+  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
 }
 
 @media (max-width: 767px) {
