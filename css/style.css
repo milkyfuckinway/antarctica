@@ -2879,9 +2879,7 @@ button,
 
   .socials a svg {
     height: 16px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: 16px;
   }
 }
 
