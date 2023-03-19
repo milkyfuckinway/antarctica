@@ -67,6 +67,10 @@
   }
 
   &--checkbox input:checked + .custom-toggle__icon {
+    background-color: $color-alice-blue;
+    background-image: url("./../img/svg/custom-toggle-checkmark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 10px;
   }
 
