@@ -3,6 +3,7 @@
   display: flex;
   font-size: 18px;
   font-weight: 300;
+  gap: 5px;
   line-height: 27px;
   margin-right: 0 0 20px 0;
   min-height: 18px;
@@ -19,6 +20,11 @@
 
   &:last-of-type {
     margin-bottom: 30px;
+
+    @include vp-767 {
+      gap: 8px;
+      margin-bottom: 25px;
+    }
   }
 
   & input {
@@ -32,47 +38,36 @@
   & label {
     cursor: pointer;
     font-size: 10px;
-    line-height: 180%;
-    padding-left: 23px;
+    line-height: 13px;
     position: relative;
 
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
+    @include vp-767 {
+      font-size: 10px;
+      line-height: 12px;
     }
   }
 
   &--checkbox {
     & .custom-toggle__icon {
       background-color: $color-alice-blue;
+      background-image: url("./../img/svg/custom-toggle-checkmark.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 0%;
+      flex-shrink: 0;
       height: 18px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transition: outline 0.3s ease;
+      transition: outline, background-size 0.3s ease;
       width: 18px;
 
-      &::before {
-        background-image: url("./../img/svg/custom-toggle-checkmark.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 0%;
-        content: "";
-        height: 100%;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: background-size 0.3s ease;
-        width: 100%;
+      @include vp-767 {
+        height: 20px;
+        width: 20px;
       }
     }
   }
 
   &--checkbox input:checked + .custom-toggle__icon {
-    &::before {
-      background-size: 60%;
-    }
+    background-size: 60%;
   }
 
   &--radio {

@@ -21,6 +21,40 @@
   }
 }
 
+.header h1 {
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.header p {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 .header .container {
   @include vp-767 {
     padding: 0 8px 0 15px;
@@ -37,12 +71,12 @@
 
   @include vp-1023 {
     column-gap: 50px;
-    padding: 28px 0;
+    padding: 28px;
   }
 
   @include vp-767 {
     column-gap: 25px;
-    padding: 10px 0;
+    padding: 10px 0 0 3px;
   }
 }
 
@@ -165,28 +199,8 @@
   @include vp-1023 {
     padding: 187px 0;
   }
-}
 
-.header__bottom h1 {
-  font-size: 54px;
-  line-height: 66px;
-  margin: 0;
-  margin-bottom: 12px;
-
-  @include vp-1023 {
-    font-size: 50px;
-    line-height: 61px;
-  }
-}
-
-.header__bottom p {
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0;
-  margin-bottom: 12px;
-
-  @include vp-1023 {
-    font-size: 18px;
-    line-height: 22px;
+  @include vp-767 {
+    padding: 126px 0;
   }
 }

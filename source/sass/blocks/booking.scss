@@ -18,8 +18,8 @@
   }
 
   @include vp-767 {
-    padding-left: 15px;
-    padding-right: 15px;
+    gap: 35px;
+    padding: 59px 15px 100px;
   }
 }
 
@@ -34,6 +34,12 @@
     margin-bottom: 6px;
     text-align: center;
   }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 14px;
+  }
 }
 
 .booking p {
@@ -46,6 +52,12 @@
     font-size: 18px;
     text-align: center;
   }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
 }
 
 .booking h3 {
@@ -56,6 +68,8 @@
   margin-bottom: 28px;
 
   @include vp-767 {
+    font-size: 18px;
+    line-height: 25px;
     text-align: center;
   }
 }
@@ -73,7 +87,7 @@
   width: 100%;
 
   @include vp-767 {
-    padding: 40px 30px;
+    padding: 34px 30px;
   }
 }
 
