@@ -1241,18 +1241,18 @@ button,
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 0%;
+  background-size: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
-  -webkit-transition: outline, background-size 0.3s ease;
-  -o-transition: outline, background-size 0.3s ease;
-  transition: outline, background-size 0.3s ease;
+  -webkit-transition: outline 0.3s ease, background-size 0.3s ease;
+  -o-transition: outline 0.3s ease, background-size 0.3s ease;
+  transition: outline 0.3s ease, background-size 0.3s ease;
   width: 18px;
 }
 
 .custom-toggle--checkbox input:checked + .custom-toggle__icon {
-  background-size: 60%;
+  background-size: 10px;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -3121,6 +3121,11 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 40px;
+  }
+
+  .contacts__map {
+    min-height: 316px;
+    min-width: 290px;
   }
 
   .booking .container {
