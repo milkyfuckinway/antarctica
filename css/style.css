@@ -3211,6 +3211,7 @@ button,
   .socials {
     margin-left: -8px;
     margin-right: 0;
+    max-width: 100%;
   }
 }
 
