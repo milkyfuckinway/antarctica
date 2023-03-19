@@ -3269,8 +3269,10 @@ button,
   }
 }
 
-.main-nav--header.no-js .main-nav__wrapper ul {
-  gap: 5px;
+@media (max-width: 767px) {
+  .main-nav--header.no-js .main-nav__wrapper ul {
+    gap: 5px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3279,9 +3281,11 @@ button,
     -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
     -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
     transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+    font-size: 14px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    line-height: 16px;
     min-height: auto;
     padding: 2px;
   }
