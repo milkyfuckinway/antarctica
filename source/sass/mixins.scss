@@ -53,6 +53,7 @@
 // Ховер
 
 @mixin default-states($outline-color: $color-default-white) {
+  cursor: pointer;
   transition: opacity $trans-default;
 
   &:hover {

@@ -13,8 +13,12 @@
 
   & input,
   & textarea {
+    @include default-outline(transparent);
+    @include default-states($color-alice-blue);
+
     border: 0;
     color: $color-tangaroa;
+    cursor: text;
     flex-grow: 1;
     font-size: 14px;
     line-height: 150%;
@@ -23,9 +27,6 @@
     padding: 11px 16px;
     transition: outline, opacity 0.3s ease;
     width: 100%;
-
-    @include default-outline(transparent);
-    @include default-states($color-alice-blue);
 
     &::placeholder {
       color: rgba($color-tangaroa, 0.7);

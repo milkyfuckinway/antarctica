@@ -93,8 +93,10 @@
   @include vp-1023 {
     gap: 25px;
   }
+
   @include vp-767 {
     flex-direction: column;
+    gap: 22px;
     width: 100%;
   }
 }
@@ -114,6 +116,7 @@
   @include vp-767 {
     align-items: flex-start;
     flex-direction: column;
+    row-gap: 8px;
   }
 }
 
@@ -144,6 +147,11 @@
     @include vp-1023 {
       height: 20px;
       width: 38px;
+    }
+
+    @include vp-767 {
+      height: 22px;
+      width: 42px;
     }
   }
 }

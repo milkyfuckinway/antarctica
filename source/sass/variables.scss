@@ -18,11 +18,7 @@ $color-tangaroa: #011c40;
 
 // Gradient
 
-$black-to-right: linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.75) 0%,
-  rgba(0, 0, 0, 0) 75%
-);
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 // ---------------------------------
@@ -42,7 +38,8 @@ $ff-placeholder: "Placeholder", "Arial", sans-serif;
 $tf-default: ease;
 $tf-linear: linear;
 $tf-bezier-stretch: cubic-bezier(0, 2, 1, 1);
-$trans-default: 0.5s $tf-bezier-stretch;
+
+$trans-default: 0.4s $tf-bezier-stretch;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);

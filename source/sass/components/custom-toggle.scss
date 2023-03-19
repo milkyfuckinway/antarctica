@@ -11,8 +11,10 @@
   width: 100%;
 
   @include default-outline(transparent);
+  @include default-states($color-alice-blue);
 
-  &:focus-within {
+  &:focus-within,
+  &:active {
     @include default-outline($color-alice-blue);
   }
 
@@ -39,7 +41,6 @@
     line-height: 13px;
     position: relative;
     user-select: none;
-    @include default-states($color-alice-blue);
 
     @include vp-767 {
       font-size: 10px;
@@ -52,11 +53,12 @@
       background-color: $color-alice-blue;
       background-image: url("./../img/svg/custom-toggle-checkmark.svg");
       background-position: center;
+      background-position: -12px;
       background-repeat: no-repeat;
-      background-size: 0;
+      background-size: 12px;
       flex-shrink: 0;
       height: 18px;
-      transition: 0.1s;
+      transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
       width: 18px;
 
       @include vp-767 {
@@ -66,7 +68,7 @@
     }
 
     & input:checked + .custom-toggle__icon {
-      background-size: 10px;
+      background-position: center;
     }
   }
 

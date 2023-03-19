@@ -119,7 +119,7 @@
   position: relative;
   top: 0;
   transform: translateX(calc(-100% - 10px));
-  transition: 0.15s $tf-linear;
+  transition: 0.4s transform cubic-bezier(0, 1, 0, 1);
   width: 100%;
   z-index: 2;
 
