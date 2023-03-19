@@ -27,6 +27,11 @@
     min-height: 335px;
     min-width: 324px;
   }
+
+  @include vp-767 {
+    min-height: 316px;
+    min-width: 290px;
+  }
 }
 
 .contacts__content {

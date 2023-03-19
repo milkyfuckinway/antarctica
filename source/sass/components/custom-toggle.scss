@@ -53,10 +53,10 @@
       background-image: url("./../img/svg/custom-toggle-checkmark.svg");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 0%;
+      background-size: 0;
       flex-shrink: 0;
       height: 18px;
-      transition: outline, background-size 0.3s ease;
+      transition: outline 0.3s ease, background-size 0.3s ease;
       width: 18px;
 
       @include vp-767 {
@@ -67,7 +67,7 @@
   }
 
   &--checkbox input:checked + .custom-toggle__icon {
-    background-size: 60%;
+    background-size: 10px;
   }
 
   &--radio {

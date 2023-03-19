@@ -13,7 +13,7 @@ mixin booking()
             input(name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон")
           div(class="custom-input" data-required data-validate-type="email")
             input(name="email" type="email" aria-label="Введите ваш Email." autocomplete="off" required placeholder="Email")
-          div(class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox")
+          div(class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" tab-index='0')
             input(id="personaldata" type="checkbox" checked required name='personaldata')
             .custom-toggle__icon
             label(for="personaldata") Я согласен на обработку моих персональных данных
