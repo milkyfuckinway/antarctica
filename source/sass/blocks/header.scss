@@ -9,15 +9,19 @@
   min-height: 650px;
   overflow: hidden;
 
-  @include graphic-retina("content/header-background", $color-tangaroa, "jpg");
+  @include graphic-retina("content/header/desktop/header-background", $color-tangaroa, "jpg");
 
   @include vp-1023 {
     box-shadow: none;
     min-height: 638px;
+
+    @include graphic-retina("content/header/tablet/header-background", $color-tangaroa, "jpg");
   }
 
   @include vp-767 {
     min-height: 500px;
+
+    @include graphic-retina("content/header/mobile/header-background", $color-tangaroa, "jpg");
   }
 }
 
@@ -71,7 +75,7 @@
 
   @include vp-1023 {
     column-gap: 50px;
-    padding: 28px;
+    padding: 28px 0;
   }
 
   @include vp-767 {
