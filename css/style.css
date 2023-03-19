@@ -1245,18 +1245,18 @@ button,
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 0.001px;
+  background-size: 10px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
-  -webkit-transition: 0.1s background-size;
-  -o-transition: 0.1s background-size;
-  transition: 0.1s background-size;
+  -webkit-transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
+  -o-transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
+  transition: 0.3s cubic-bezier(0, 2, 1, 1) background-position;
   width: 18px;
 }
 
 .custom-toggle--checkbox input:checked + .custom-toggle__icon {
-  background-size: 10px;
+  background-position: -100%;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
