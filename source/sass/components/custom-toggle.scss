@@ -38,6 +38,7 @@
     font-size: 10px;
     line-height: 13px;
     position: relative;
+    user-select: none;
     @include default-states($color-alice-blue);
 
     @include vp-767 {
