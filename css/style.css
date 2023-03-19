@@ -1195,7 +1195,8 @@ button,
   outline-offset: 2px;
 }
 
-.custom-toggle:focus-within {
+.custom-toggle:focus-within,
+.custom-toggle:active {
   outline: 2px solid #f9fbfd;
   outline-offset: 2px;
 }
@@ -1244,13 +1245,13 @@ button,
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 0;
+  background-size: 2px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.1s background-size;
+  -o-transition: 0.1s background-size;
+  transition: 0.1s background-size;
   width: 18px;
 }
 
