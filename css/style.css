@@ -3257,10 +3257,20 @@ button,
 
 @media (max-width: 767px) {
   .main-nav--header.no-js .main-nav__wrapper {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 5px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
   }
+}
+
+.main-nav--header.no-js .main-nav__wrapper ul {
+  gap: 5px;
 }
 
 @media (max-width: 767px) {
@@ -3272,6 +3282,8 @@ button,
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    min-height: auto;
+    padding: 2px;
   }
   .main-nav--header.no-js li a:hover {
     opacity: 0.7;
