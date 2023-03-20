@@ -2133,6 +2133,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2231,6 +2233,7 @@ button,
 }
 @media (max-width: 1023px) {
   .footer .container {
+    gap: 19px;
     padding-bottom: 45px;
   }
 }
@@ -2243,7 +2246,6 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 19px;
     padding-bottom: 35px;
     padding-top: 40px;
   }
@@ -2791,6 +2793,7 @@ button,
   line-height: 150%;
   margin-top: auto;
   min-height: 40px;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
   -webkit-transition: 0.2s ease opacity;
@@ -3157,7 +3160,7 @@ button,
   line-height: 150%;
   margin-top: auto;
   min-height: 43px;
-  padding: 0;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
   -webkit-transition: 0.2s ease opacity;
@@ -3193,27 +3196,31 @@ button,
       flex-wrap: wrap;
   gap: 20px;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
   margin: 0;
   margin-top: 4px;
-  max-width: 280px;
   padding: 0;
+  width: 250px;
 }
 @media (max-width: 1023px) {
   .socials {
     gap: 12px;
     margin: 0;
     margin-right: -4px;
+    width: 145px;
   }
 }
 @media (max-width: 767px) {
   .socials {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-left: -8px;
     margin-right: 0;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
