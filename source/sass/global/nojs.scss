@@ -18,6 +18,16 @@
   }
 }
 
+.main-nav--header.no-js .main-nav__wrapper > .logo {
+  @include vp-767 {
+    margin-top: 10px;
+
+    & svg {
+      height: 20px;
+    }
+  }
+}
+
 .main-nav--header.no-js .main-nav__wrapper ul {
   @include vp-767 {
     gap: 5px;
@@ -41,6 +51,12 @@
   }
 }
 
+.header__top.no-js {
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
 .header__top.no-js > .logo {
   @include vp-767 {
     display: none;
@@ -49,4 +65,10 @@
 
 .contacts__map.no-js {
   @include graphic-webp("./content/map/map", #e9eeee, "jpg");
+}
+
+.header__bottom.no-js {
+  @include vp-767 {
+    padding-top: 71px;
+  }
 }

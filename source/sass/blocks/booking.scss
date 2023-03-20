@@ -105,6 +105,7 @@
   background-color: $color-alice-blue;
   border: 0;
   color: $color-tangaroa;
+  cursor: pointer;
   display: flex;
   font-size: 14px;
   font-weight: 600;
@@ -113,6 +114,7 @@
   margin-top: auto;
   min-height: 43px;
   padding: 10px;
+  user-select: none;
   width: 100%;
 
   @include default-states($color-alice-blue);

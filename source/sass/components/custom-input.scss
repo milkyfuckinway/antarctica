@@ -14,7 +14,14 @@
   & input,
   & textarea {
     @include default-outline(transparent);
-    @include default-states($color-alice-blue);
+
+    @include hover {
+      @include default-outline($color-alice-blue);
+    }
+
+    @include hover-focus {
+      @include default-outline($color-alice-blue);
+    }
 
     border: 0;
     color: $color-tangaroa;

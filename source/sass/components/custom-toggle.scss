@@ -1,73 +1,77 @@
 .custom-toggle {
-  align-items: center;
-  display: flex;
-  font-size: 18px;
-  font-weight: 300;
-  gap: 5px;
-  line-height: 27px;
-  margin-right: 0 0 20px 0;
-  min-height: 18px;
-  position: relative;
-  width: 100%;
-
-  @include default-outline(transparent);
-  @include default-states($color-alice-blue);
-
-  &:focus-within,
-  &:active {
-    @include default-outline($color-alice-blue);
-  }
-
-  &:last-of-type {
+  &--checkbox {
     margin-bottom: 30px;
 
     @include vp-767 {
-      gap: 8px;
       margin-bottom: 25px;
     }
-  }
 
-  & input {
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    position: absolute;
-    width: 1px;
-  }
+    & input {
+      @include visually-hidden;
 
-  & label {
-    cursor: pointer;
-    font-size: 10px;
-    line-height: 13px;
-    position: relative;
-    user-select: none;
+      &.focus-visible + label {
+        @include default-outline($color-alice-blue);
+      }
 
-    @include vp-767 {
-      font-size: 10px;
-      line-height: 12px;
-    }
-  }
+      & + label {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        font-size: 10px;
+        gap: 5px;
+        line-height: 13px;
+        margin-right: 0 0 20px 0;
+        min-height: 18px;
+        user-select: none;
+        width: 100%;
 
-  &--checkbox {
-    & input + .custom-toggle__icon {
-      background-color: $color-alice-blue;
-      background-image: url("./../img/svg/custom-toggle-checkmark.svg");
-      background-position: -12px;
-      background-repeat: no-repeat;
-      background-size: 12px;
-      flex-shrink: 0;
-      height: 18px;
-      transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
-      width: 18px;
+        @include default-outline(transparent);
+        @include default-states($color-alice-blue);
 
-      @include vp-767 {
-        height: 20px;
-        width: 20px;
+        @include hover-focus {
+          @include default-outline($color-alice-blue);
+        }
+
+        @include vp-767 {
+          gap: 8px;
+          line-height: 12px;
+        }
+
+        & .custom-toggle__icon {
+          background-color: $color-alice-blue;
+          background-image: url("./../img/svg/custom-toggle-checkmark.svg");
+          background-position: -12px;
+          background-repeat: no-repeat;
+          background-size: 12px;
+          flex-shrink: 0;
+          height: 18px;
+          transition: 0.4s cubic-bezier(0, 2, 0.5, 1) background-position;
+          width: 18px;
+
+          @include vp-767 {
+            height: 20px;
+            width: 20px;
+          }
+        }
       }
     }
 
-    & input:checked + .custom-toggle__icon {
+    & input:checked + label .custom-toggle__icon {
       background-position: center;
+    }
+  }
+
+  &.is-invalid input {
+    & + label {
+      outline-color: #ff1553;
+
+      @include hover-focus {
+        @include default-outline(rgba(#ff1553, 0.5));
+      }
+    }
+
+    &.focus-visible + label {
+      @include default-outline(rgba(#ff1553, 0.5));
     }
   }
 
@@ -94,15 +98,6 @@
         transition: color 0.3s ease;
         width: 20px;
       }
-    }
-  }
-
-  &.is-invalid {
-    outline-color: #ff1553;
-
-    &:focus-within,
-    &:hover {
-      outline-color: rgba(#ff1553, 0.5);
     }
   }
 

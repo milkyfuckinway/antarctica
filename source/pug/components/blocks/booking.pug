@@ -15,6 +15,7 @@ mixin booking()
             input(name="email" type="email" aria-label="Введите ваш Email." autocomplete="off" required placeholder="Email")
           div(class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox")
             input(id="personaldata" name='personaldata' type="checkbox" checked required)
-            .custom-toggle__icon
-            label(for="personaldata") Я согласен на обработку моих персональных данных
+            label(for="personaldata")
+              .custom-toggle__icon
+              |Я согласен на обработку моих персональных данных
           button(type='submit') Оставить заявку
