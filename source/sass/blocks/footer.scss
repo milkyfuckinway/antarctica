@@ -7,8 +7,12 @@
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
   padding-top: 50px;
+
+  @include vp-1023 {
+    padding-bottom: 45px;
+  }
 
   @include vp-767 {
     align-items: flex-start;
