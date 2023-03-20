@@ -1085,9 +1085,16 @@ button,
   transition: outline, opacity 0.3s ease;
   width: 100%;
 }
-.custom-input input:hover, .custom-input textarea:hover,
-.custom-textarea input:hover,
-.custom-textarea textarea:hover {
+@media (hover: hover) {
+  .custom-input input:hover:not(.focus-visible), .custom-input textarea:hover:not(.focus-visible),
+.custom-textarea input:hover:not(.focus-visible),
+.custom-textarea textarea:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.custom-input input.focus-visible:focus, .custom-input textarea.focus-visible:focus,
+.custom-textarea input.focus-visible:focus,
+.custom-textarea textarea.focus-visible:focus {
   opacity: 0.7;
 }
 .custom-input input:active, .custom-input textarea:active,
@@ -1201,7 +1208,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.custom-toggle:hover {
+@media (hover: hover) {
+  .custom-toggle:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.custom-toggle.focus-visible:focus {
   opacity: 0.7;
 }
 .custom-toggle:active {
@@ -1814,7 +1826,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.header__top > .logo:not(.disabled):hover {
+@media (hover: hover) {
+  .header__top > .logo:not(.disabled):hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.header__top > .logo:not(.disabled).focus-visible:focus {
   opacity: 0.7;
 }
 .header__top > .logo:not(.disabled):active {
@@ -1859,7 +1876,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.header__button:hover {
+@media (hover: hover) {
+  .header__button:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.header__button.focus-visible:focus {
   opacity: 0.7;
 }
 .header__button:active {
@@ -2058,7 +2080,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.main-nav--header a:hover {
+@media (hover: hover) {
+  .main-nav--header a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.main-nav--header a.focus-visible:focus {
   opacity: 0.7;
 }
 .main-nav--header a:active {
@@ -2089,18 +2116,28 @@ button,
     -o-transition: 0.2s ease opacity;
     transition: 0.2s ease opacity;
   }
-  .main-nav--header a:hover {
+}
+@media (max-width: 767px) and (hover: hover) {
+  .main-nav--header a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+@media (max-width: 767px) {
+  .main-nav--header a.focus-visible:focus {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 767px) {
   .main-nav--header a:active {
     opacity: 0.5;
   }
+}
+@media (max-width: 767px) {
   .main-nav--header a:focus-visible {
     outline: 2px solid #011c40;
     outline-offset: 2px;
   }
 }
-
 .main-nav--footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2169,7 +2206,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.main-nav--footer a:hover {
+@media (hover: hover) {
+  .main-nav--footer a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.main-nav--footer a.focus-visible:focus {
   opacity: 0.7;
 }
 .main-nav--footer a:active {
@@ -2800,7 +2842,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.cruises__detail a:hover {
+@media (hover: hover) {
+  .cruises__detail a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.cruises__detail a.focus-visible:focus {
   opacity: 0.7;
 }
 .cruises__detail a:active {
@@ -2924,7 +2971,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.contacts a:hover {
+@media (hover: hover) {
+  .contacts a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.contacts a.focus-visible:focus {
   opacity: 0.7;
 }
 .contacts a:active {
@@ -3167,7 +3219,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.booking__form button[type=submit]:hover {
+@media (hover: hover) {
+  .booking__form button[type=submit]:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.booking__form button[type=submit].focus-visible:focus {
   opacity: 0.7;
 }
 .booking__form button[type=submit]:active {
@@ -3242,7 +3299,12 @@ button,
   -o-transition: 0.2s ease opacity;
   transition: 0.2s ease opacity;
 }
-.socials a:hover {
+@media (hover: hover) {
+  .socials a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.socials a.focus-visible:focus {
   opacity: 0.7;
 }
 .socials a:active {
@@ -3304,18 +3366,28 @@ button,
     min-height: auto;
     padding: 2px;
   }
-  .main-nav--header.no-js li a:hover {
+}
+@media (max-width: 767px) and (hover: hover) {
+  .main-nav--header.no-js li a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+@media (max-width: 767px) {
+  .main-nav--header.no-js li a.focus-visible:focus {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 767px) {
   .main-nav--header.no-js li a:active {
     opacity: 0.5;
   }
+}
+@media (max-width: 767px) {
   .main-nav--header.no-js li a:focus-visible {
     outline: 2px solid #f9fbfd;
     outline-offset: 2px;
   }
 }
-
 @media (max-width: 767px) {
   .header__button.no-js {
     display: none;
