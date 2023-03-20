@@ -87,6 +87,7 @@
 }
 
 .advantages li {
+  align-items: flex-start;
   background-color: $color-alice-blue;
   display: flex;
   flex-direction: column;
@@ -111,7 +112,7 @@
   @include vp-1023 {
     display: flex;
     height: 26px;
-    width: max-content;
+    width: auto;
   }
 }
 
