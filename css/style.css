@@ -1065,8 +1065,6 @@ button,
 .custom-textarea textarea {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   border: 0;
   color: #011c40;
   cursor: text;
@@ -1082,32 +1080,6 @@ button,
   -o-transition: outline, opacity 0.3s ease;
   transition: outline, opacity 0.3s ease;
   width: 100%;
-}
-@media (hover: hover) {
-  .custom-input input:hover:not(.focus-visible), .custom-input textarea:hover:not(.focus-visible),
-.custom-textarea input:hover:not(.focus-visible),
-.custom-textarea textarea:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-.custom-input input.focus-visible:focus, .custom-input textarea.focus-visible:focus,
-.custom-textarea input.focus-visible:focus,
-.custom-textarea textarea.focus-visible:focus {
-  opacity: 0.7;
-}
-.custom-input input:active, .custom-input textarea:active,
-.custom-textarea input:active,
-.custom-textarea textarea:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-}
-.custom-input input:focus-visible, .custom-input textarea:focus-visible,
-.custom-textarea input:focus-visible,
-.custom-textarea textarea:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 .custom-input input::-webkit-input-placeholder, .custom-input textarea::-webkit-input-placeholder, .custom-textarea input::-webkit-input-placeholder, .custom-textarea textarea::-webkit-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
@@ -1187,81 +1159,84 @@ button,
   color: #15ab07;
 }
 
-.custom-toggle {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 18px;
-  font-weight: 300;
-  gap: 5px;
-  line-height: 27px;
-  margin-right: 0 0 20px 0;
-  min-height: 18px;
-  position: relative;
-  width: 100%;
+.custom-toggle--checkbox {
+  margin-bottom: 30px;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
-  .custom-toggle:hover:not(.focus-visible) {
+  .custom-toggle--checkbox:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 }
-.custom-toggle.focus-visible:focus {
+.custom-toggle--checkbox.focus-visible:focus {
   opacity: 0.7;
 }
-.custom-toggle:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.custom-toggle--checkbox.focus-visible:active {
+  opacity: 0.3;
 }
-.custom-toggle:focus-visible {
+.custom-toggle--checkbox:focus-visible {
   outline: 2px solid #f9fbfd;
   outline-offset: 2px;
 }
-.custom-toggle:focus-within, .custom-toggle:active {
+.custom-toggle--checkbox:focus-within, .custom-toggle--checkbox:active {
   outline: 2px solid #f9fbfd;
   outline-offset: 2px;
-}
-.custom-toggle:last-of-type {
-  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
-  .custom-toggle:last-of-type {
-    gap: 8px;
+  .custom-toggle--checkbox {
     margin-bottom: 25px;
   }
 }
-.custom-toggle input {
+.custom-toggle--checkbox input {
+  border: 0;
   clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   height: 1px;
   margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
   position: absolute;
-  width: 1px;
-}
-.custom-toggle label {
-  cursor: pointer;
-  font-size: 10px;
-  line-height: 13px;
-  position: relative;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  white-space: nowrap;
+  width: 1px;
+}
+.custom-toggle--checkbox input + label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  gap: 5px;
+  line-height: 13px;
+  margin-right: 0 0 20px 0;
+  min-height: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
 }
 @media (max-width: 767px) {
-  .custom-toggle label {
-    font-size: 10px;
+  .custom-toggle--checkbox input + label {
+    gap: 8px;
     line-height: 12px;
   }
 }
-.custom-toggle--checkbox input + .custom-toggle__icon {
+.custom-toggle--checkbox input + label .custom-toggle__icon {
   background-color: #f9fbfd;
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
   background-position: -12px;
@@ -1276,12 +1251,12 @@ button,
   width: 18px;
 }
 @media (max-width: 767px) {
-  .custom-toggle--checkbox input + .custom-toggle__icon {
+  .custom-toggle--checkbox input + label .custom-toggle__icon {
     height: 20px;
     width: 20px;
   }
 }
-.custom-toggle--checkbox input:checked + .custom-toggle__icon {
+.custom-toggle--checkbox input:checked + label .custom-toggle__icon {
   background-position: center;
 }
 .custom-toggle--radio .custom-toggle__icon {
@@ -1823,8 +1798,10 @@ button,
   transition: 0.4s cubic-bezier(0, 1.45, 1, 1) transform, 0.4s cubic-bezier(0, 1.45, 1, 1) -webkit-transform;
 }
 .header__top > .logo:not(.disabled) {
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .header__top > .logo:not(.disabled):hover:not(.focus-visible) {
@@ -1834,11 +1811,8 @@ button,
 .header__top > .logo:not(.disabled).focus-visible:focus {
   opacity: 0.7;
 }
-.header__top > .logo:not(.disabled):active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.header__top > .logo:not(.disabled).focus-visible:active {
+  opacity: 0.3;
 }
 .header__top > .logo:not(.disabled):focus-visible {
   outline: 2px solid #f9fbfd;
@@ -1874,8 +1848,10 @@ button,
   padding: 0;
   width: 40px;
   z-index: 10000;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .header__button:hover:not(.focus-visible) {
@@ -1885,11 +1861,8 @@ button,
 .header__button.focus-visible:focus {
   opacity: 0.7;
 }
-.header__button:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.header__button.focus-visible:active {
+  opacity: 0.3;
 }
 .header__button:focus-visible {
   outline: 2px solid #ffffff;
@@ -2079,8 +2052,10 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .main-nav--header a:hover:not(.focus-visible) {
@@ -2090,11 +2065,8 @@ button,
 .main-nav--header a.focus-visible:focus {
   opacity: 0.7;
 }
-.main-nav--header a:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.main-nav--header a.focus-visible:active {
+  opacity: 0.3;
 }
 .main-nav--header a:focus-visible {
   outline: 2px solid #f9fbfd;
@@ -2116,8 +2088,10 @@ button,
     min-height: 40px;
     padding: 10px 10px 10px 8px;
     width: 240px;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    -webkit-transition: 0.2s ease opacity;
+    -o-transition: 0.2s ease opacity;
+    transition: 0.2s ease opacity;
   }
 }
 @media (max-width: 767px) and (hover: hover) {
@@ -2131,11 +2105,8 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .main-nav--header a:active {
-    opacity: 0.5;
-    -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-    -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-    transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+  .main-nav--header a.focus-visible:active {
+    opacity: 0.3;
   }
 }
 @media (max-width: 767px) {
@@ -2207,8 +2178,10 @@ button,
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .main-nav--footer a:hover:not(.focus-visible) {
@@ -2218,11 +2191,8 @@ button,
 .main-nav--footer a.focus-visible:focus {
   opacity: 0.7;
 }
-.main-nav--footer a:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.main-nav--footer a.focus-visible:active {
+  opacity: 0.3;
 }
 .main-nav--footer a:focus-visible {
   outline: 2px solid #f9fbfd;
@@ -2844,8 +2814,10 @@ button,
   min-height: 40px;
   padding: 10px;
   width: 100%;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .cruises__detail a:hover:not(.focus-visible) {
@@ -2855,11 +2827,8 @@ button,
 .cruises__detail a.focus-visible:focus {
   opacity: 0.7;
 }
-.cruises__detail a:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.cruises__detail a.focus-visible:active {
+  opacity: 0.3;
 }
 .cruises__detail a:focus-visible {
   outline: 2px solid #f9fbfd;
@@ -2974,8 +2943,10 @@ button,
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .contacts a:hover:not(.focus-visible) {
@@ -2985,11 +2956,8 @@ button,
 .contacts a.focus-visible:focus {
   opacity: 0.7;
 }
-.contacts a:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.contacts a.focus-visible:active {
+  opacity: 0.3;
 }
 .contacts a:focus-visible {
   outline: 2px solid #011c40;
@@ -3210,6 +3178,7 @@ button,
   background-color: #f9fbfd;
   border: 0;
   color: #011c40;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3222,9 +3191,15 @@ button,
   margin-top: auto;
   min-height: 43px;
   padding: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 100%;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .booking__form button[type=submit]:hover:not(.focus-visible) {
@@ -3234,11 +3209,8 @@ button,
 .booking__form button[type=submit].focus-visible:focus {
   opacity: 0.7;
 }
-.booking__form button[type=submit]:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.booking__form button[type=submit].focus-visible:active {
+  opacity: 0.3;
 }
 .booking__form button[type=submit]:focus-visible {
   outline: 2px solid #f9fbfd;
@@ -3304,8 +3276,10 @@ button,
           justify-content: center;
   min-height: 25px;
   min-width: 25px;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
   .socials a:hover:not(.focus-visible) {
@@ -3315,11 +3289,8 @@ button,
 .socials a.focus-visible:focus {
   opacity: 0.7;
 }
-.socials a:active {
-  opacity: 0.5;
-  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-  transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+.socials a.focus-visible:active {
+  opacity: 0.3;
 }
 .socials a:focus-visible {
   outline: 2px solid #f9fbfd;
@@ -3374,8 +3345,10 @@ button,
 
 @media (max-width: 767px) {
   .main-nav--header.no-js li a {
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    -webkit-transition: 0.2s ease opacity;
+    -o-transition: 0.2s ease opacity;
+    transition: 0.2s ease opacity;
     font-size: 14px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3396,11 +3369,8 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .main-nav--header.no-js li a:active {
-    opacity: 0.5;
-    -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-    -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
-    transition: 0.4s cubic-bezier(0, 1, 0, 1) opacity;
+  .main-nav--header.no-js li a.focus-visible:active {
+    opacity: 0.3;
   }
 }
 @media (max-width: 767px) {
