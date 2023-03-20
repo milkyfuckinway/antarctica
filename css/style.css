@@ -1884,12 +1884,12 @@ button,
 }
 @media (hover: hover) {
   .header__button:hover:not(.focus-visible):focus-visible {
-    outline: 2px solid #ffffff;
+    outline: 2px solid #f9fbfd;
     outline-offset: 2px;
   }
 }
 .header__button.focus-visible:focus:focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid #f9fbfd;
   outline-offset: 2px;
 }
 @media (hover: hover) {
@@ -1899,10 +1899,6 @@ button,
 }
 .header__button:active {
   opacity: 0.7;
-}
-.header__button:focus-visible {
-  outline: 2px solid #011c40;
-  outline-offset: 2px;
 }
 @media (max-width: 767px) {
   .header__button {
@@ -1953,6 +1949,30 @@ button,
           transform: translateY(-6px);
 }
 
+.header__top.is-open .header__button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
+}
+@media (hover: hover) {
+  .header__top.is-open .header__button:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #011c40;
+    outline-offset: 2px;
+  }
+}
+.header__top.is-open .header__button.focus-visible:focus:focus-visible {
+  outline: 2px solid #011c40;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  .header__top.is-open .header__button:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.header__top.is-open .header__button:active {
+  opacity: 0.7;
+}
 .header__top.is-open .header__button span {
   background-color: #011c40;
   width: 0;
@@ -2189,12 +2209,14 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
+  row-gap: 20px;
 }
 @media (max-width: 1023px) {
   .main-nav--footer ul {
     -webkit-column-gap: 24px;
        -moz-column-gap: 24px;
             column-gap: 24px;
+    row-gap: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -3282,6 +3304,8 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
@@ -3293,14 +3317,14 @@ button,
   margin: 0;
   margin-top: 4px;
   padding: 0;
-  width: 250px;
+  width: 205px;
 }
 @media (max-width: 1023px) {
   .socials {
     gap: 12px;
     margin: 0;
     margin-right: -4px;
-    width: 145px;
+    width: 110px;
   }
 }
 @media (max-width: 767px) {
