@@ -38,15 +38,17 @@ const initMap = () => {
 };
 
 function activateMapOnScroll() {
-  if (map.getBoundingClientRect().top - window.innerHeight < 2000 && !executed) {
-    executed = true;
-    createScriptLink();
-    ymapsScript.addEventListener('load', () => {
-      if (typeof ymaps !== 'undefined') {
-        initMap();
-      }
-    });
-    window.removeEventListener('scroll', activateMapOnScroll);
+  if (map) {
+    if (map.getBoundingClientRect().top - window.innerHeight < 2000 && !executed) {
+      executed = true;
+      createScriptLink();
+      ymapsScript.addEventListener('load', () => {
+        if (typeof ymaps !== 'undefined') {
+          initMap();
+        }
+      });
+      window.removeEventListener('scroll', activateMapOnScroll);
+    }
   }
 }
 

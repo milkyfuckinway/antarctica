@@ -23,6 +23,6 @@ mixin navigation(burger)
     each item in navigationList
       li
         if (burger=true)
-          a(href=item.href data-close-menu)=item.text
+          a(data-close-menu href=item.href)=item.text
         else
           a(href=item.href)=item.text

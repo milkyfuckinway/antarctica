@@ -3,18 +3,18 @@ mixin booking()
     .container
       .booking__content
         h2 Раннее бронирование
-        P Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%
+        P Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%
       .form.booking__form(data-callback="base" data-form-validate data-message-base="Сообщение")
         form(action="https://echo.htmlacademy.ru" method="post")
-          h3 Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+          h3 Оставьте заявку и мы свяжемся с вами в ближайшее время
           div(class="custom-input" data-limitation="name" data-required data-validate-type="text")
             input(name="name" data-focus type="text" aria-label="Введите имя." autocomplete="off" required placeholder="Имя")
           div(class="custom-input" data-required data-validate-type="phone")
             input(name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон")
           div(class="custom-input" data-required data-validate-type="email")
             input(name="email" type="email" aria-label="Введите ваш Email." autocomplete="off" required placeholder="Email")
-          div(class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" )
-            input(id="personaldata" type="checkbox" checked required name='personaldata')
+          div(class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox")
+            input(id="personaldata" name='personaldata' type="checkbox" checked required)
             .custom-toggle__icon
             label(for="personaldata") Я согласен на обработку моих персональных данных
           button(type='submit') Оставить заявку
