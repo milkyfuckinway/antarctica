@@ -3358,6 +3358,15 @@ button,
 }
 
 @media (max-width: 767px) {
+  .main-nav--header.no-js .main-nav__wrapper > .logo {
+    margin-top: 10px;
+  }
+  .main-nav--header.no-js .main-nav__wrapper > .logo svg {
+    height: 20px;
+  }
+}
+
+@media (max-width: 767px) {
   .main-nav--header.no-js .main-nav__wrapper ul {
     gap: 5px;
   }
@@ -3407,6 +3416,12 @@ button,
 }
 
 @media (max-width: 767px) {
+  .header__top.no-js {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
   .header__top.no-js > .logo {
     display: none;
   }
@@ -3422,6 +3437,12 @@ button,
   .contacts__map.no-js {
     background-color: #e9eeee;
     background-image: url("./../img/./content/map/map.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .header__bottom.no-js {
+    padding-top: 71px;
   }
 }
 
