@@ -2225,8 +2225,13 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
   padding-top: 50px;
+}
+@media (max-width: 1023px) {
+  .footer .container {
+    padding-bottom: 45px;
+  }
 }
 @media (max-width: 767px) {
   .footer .container {
