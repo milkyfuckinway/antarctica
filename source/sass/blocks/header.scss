@@ -140,7 +140,7 @@
   height: 40px;
   padding: 0;
   width: 40px;
-  z-index: 100;
+  z-index: 10000;
 
   @include default-states;
   @include default-focus($color-tangaroa);
