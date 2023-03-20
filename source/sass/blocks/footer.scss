@@ -11,13 +11,13 @@
   padding-top: 50px;
 
   @include vp-1023 {
+    gap: 19px;
     padding-bottom: 45px;
   }
 
   @include vp-767 {
     align-items: flex-start;
     flex-direction: column;
-    gap: 19px;
     padding-bottom: 35px;
     padding-top: 40px;
   }
