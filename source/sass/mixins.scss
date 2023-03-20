@@ -57,14 +57,12 @@
   transition: $trans-default opacity;
 
   @include hover-focus {
+    @include default-focus($outline-color);
+  }
+
+  @include hover {
     opacity: 0.7;
   }
-
-  @include active {
-    opacity: 0.3;
-  }
-
-  @include default-focus($outline-color);
 }
 
 // ретина
