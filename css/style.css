@@ -1183,31 +1183,6 @@ button,
 
 .custom-toggle--checkbox {
   margin-bottom: 30px;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
-}
-@media (hover: hover) {
-  .custom-toggle--checkbox:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-.custom-toggle--checkbox.focus-visible:focus {
-  opacity: 0.7;
-}
-.custom-toggle--checkbox.focus-visible:active {
-  opacity: 0.3;
-}
-.custom-toggle--checkbox:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
-}
-.custom-toggle--checkbox:focus-within, .custom-toggle--checkbox:active {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (max-width: 767px) {
   .custom-toggle--checkbox {
@@ -1233,6 +1208,10 @@ button,
   white-space: nowrap;
   width: 1px;
 }
+.custom-toggle--checkbox input.focus-visible + label {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
 .custom-toggle--checkbox input + label {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1251,6 +1230,37 @@ button,
       -ms-user-select: none;
           user-select: none;
   width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
+}
+@media (hover: hover) {
+  .custom-toggle--checkbox input + label:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+.custom-toggle--checkbox input + label.focus-visible:focus {
+  opacity: 0.7;
+}
+.custom-toggle--checkbox input + label.focus-visible:active {
+  opacity: 0.3;
+}
+.custom-toggle--checkbox input + label:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  .custom-toggle--checkbox input + label:hover:not(.focus-visible) {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.custom-toggle--checkbox input + label.focus-visible:focus {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
 }
 @media (max-width: 767px) {
   .custom-toggle--checkbox input + label {
@@ -1281,6 +1291,23 @@ button,
 .custom-toggle--checkbox input:checked + label .custom-toggle__icon {
   background-position: center;
 }
+.custom-toggle.is-invalid input + label {
+  outline-color: #ff1553;
+}
+@media (hover: hover) {
+  .custom-toggle.is-invalid input + label:hover:not(.focus-visible) {
+    outline: 2px solid rgba(255, 21, 83, 0.5);
+    outline-offset: 2px;
+  }
+}
+.custom-toggle.is-invalid input + label.focus-visible:focus {
+  outline: 2px solid rgba(255, 21, 83, 0.5);
+  outline-offset: 2px;
+}
+.custom-toggle.is-invalid input.focus-visible + label {
+  outline: 2px solid rgba(255, 21, 83, 0.5);
+  outline-offset: 2px;
+}
 .custom-toggle--radio .custom-toggle__icon {
   border: 1px solid #2c39f2;
   border-radius: 50%;
@@ -1308,12 +1335,6 @@ button,
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   width: 20px;
-}
-.custom-toggle.is-invalid {
-  outline-color: #ff1553;
-}
-.custom-toggle.is-invalid:focus-within, .custom-toggle.is-invalid:hover {
-  outline-color: rgba(255, 21, 83, 0.5);
 }
 .custom-toggle .input-message {
   bottom: -5px;
