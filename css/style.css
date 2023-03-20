@@ -1021,9 +1021,9 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
-  -webkit-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.1s ease;
+  -o-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
 }
 .btn--red {
   background-color: #ff1553;
@@ -1225,6 +1225,7 @@ button,
   line-height: 13px;
   margin-right: 0 0 20px 0;
   min-height: 18px;
+  -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1792,10 +1793,11 @@ button,
   left: 0;
   pointer-events: none;
   position: absolute;
+  -webkit-tap-highlight-color: transparent;
   top: 0;
-  -webkit-transition: 0.2s ease background-color;
-  -o-transition: 0.2s ease background-color;
-  transition: 0.2s ease background-color;
+  -webkit-transition: 0.1s ease background-color;
+  -o-transition: 0.1s ease background-color;
+  transition: 0.1s ease background-color;
   width: 100%;
   z-index: 9998;
 }
@@ -1823,9 +1825,9 @@ button,
 }
 .header__top > .logo:not(.disabled) {
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .header__top > .logo:not(.disabled):hover:not(.focus-visible):focus-visible {
@@ -1841,6 +1843,9 @@ button,
   .header__top > .logo:not(.disabled):hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.header__top > .logo:not(.disabled):active {
+  opacity: 0.7;
 }
 @media (max-width: 1023px) {
   .header__top > .logo svg {
@@ -1873,9 +1878,9 @@ button,
   width: 40px;
   z-index: 10000;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .header__button:hover:not(.focus-visible):focus-visible {
@@ -1891,6 +1896,9 @@ button,
   .header__button:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.header__button:active {
+  opacity: 0.7;
 }
 .header__button:focus-visible {
   outline: 2px solid #011c40;
@@ -1914,11 +1922,11 @@ button,
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
-  -webkit-transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.1s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.1s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.1s ease background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.1s ease background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.1s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
   width: 24px;
 }
 .header__button span::before, .header__button span::after {
@@ -2077,9 +2085,9 @@ button,
   font-weight: 500;
   line-height: 20px;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .main-nav--header a:hover:not(.focus-visible):focus-visible {
@@ -2095,6 +2103,9 @@ button,
   .main-nav--header a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.main-nav--header a:active {
+  opacity: 0.7;
 }
 @media (max-width: 1023px) {
   .main-nav--header a {
@@ -2113,9 +2124,9 @@ button,
     padding: 10px 10px 10px 8px;
     width: 240px;
     -webkit-tap-highlight-color: transparent;
-    -webkit-transition: 0.2s ease opacity;
-    -o-transition: 0.2s ease opacity;
-    transition: 0.2s ease opacity;
+    -webkit-transition: linear 0.2s opacity;
+    -o-transition: linear 0.2s opacity;
+    transition: linear 0.2s opacity;
   }
 }
 @media (max-width: 767px) and (hover: hover) {
@@ -2132,6 +2143,11 @@ button,
 }
 @media (max-width: 767px) and (hover: hover) {
   .main-nav--header a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 767px) {
+  .main-nav--header a:active {
     opacity: 0.7;
   }
 }
@@ -2200,9 +2216,9 @@ button,
   font-weight: 500;
   line-height: 20px;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .main-nav--footer a:hover:not(.focus-visible):focus-visible {
@@ -2218,6 +2234,9 @@ button,
   .main-nav--footer a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.main-nav--footer a:active {
+  opacity: 0.7;
 }
 @media (max-width: 1023px) {
   .main-nav--footer a {
@@ -2836,9 +2855,9 @@ button,
   padding: 10px;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .cruises__detail a:hover:not(.focus-visible):focus-visible {
@@ -2854,6 +2873,9 @@ button,
   .cruises__detail a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.cruises__detail a:active {
+  opacity: 0.7;
 }
 
 .contacts .container {
@@ -2965,9 +2987,9 @@ button,
   font-weight: 400;
   line-height: 150%;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .contacts a:hover:not(.focus-visible):focus-visible {
@@ -2983,6 +3005,9 @@ button,
   .contacts a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.contacts a:active {
+  opacity: 0.7;
 }
 
 .contacts li svg {
@@ -3219,9 +3244,9 @@ button,
           user-select: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .booking__form button[type=submit]:hover:not(.focus-visible):focus-visible {
@@ -3237,6 +3262,9 @@ button,
   .booking__form button[type=submit]:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.booking__form button[type=submit]:active {
+  opacity: 0.7;
 }
 
 .form form {
@@ -3300,9 +3328,9 @@ button,
   min-height: 25px;
   min-width: 25px;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
+  -webkit-transition: linear 0.2s opacity;
+  -o-transition: linear 0.2s opacity;
+  transition: linear 0.2s opacity;
 }
 @media (hover: hover) {
   .socials a:hover:not(.focus-visible):focus-visible {
@@ -3318,6 +3346,9 @@ button,
   .socials a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+}
+.socials a:active {
+  opacity: 0.7;
 }
 @media (max-width: 1023px) {
   .socials a svg {
@@ -3369,9 +3400,9 @@ button,
 @media (max-width: 767px) {
   .main-nav--header.no-js li a {
     -webkit-tap-highlight-color: transparent;
-    -webkit-transition: 0.2s ease opacity;
-    -o-transition: 0.2s ease opacity;
-    transition: 0.2s ease opacity;
+    -webkit-transition: linear 0.2s opacity;
+    -o-transition: linear 0.2s opacity;
+    transition: linear 0.2s opacity;
     font-size: 14px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3395,6 +3426,11 @@ button,
 }
 @media (max-width: 767px) and (hover: hover) {
   .main-nav--header.no-js li a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 767px) {
+  .main-nav--header.no-js li a:active {
     opacity: 0.7;
   }
 }
