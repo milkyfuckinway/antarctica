@@ -1232,25 +1232,6 @@ button,
   width: 100%;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-transition: 0.2s ease opacity;
-  -o-transition: 0.2s ease opacity;
-  transition: 0.2s ease opacity;
-}
-@media (hover: hover) {
-  .custom-toggle--checkbox input + label:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-.custom-toggle--checkbox input + label.focus-visible:focus {
-  opacity: 0.7;
-}
-.custom-toggle--checkbox input + label.focus-visible:active {
-  opacity: 0.3;
-}
-.custom-toggle--checkbox input + label:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (hover: hover) {
   .custom-toggle--checkbox input + label:hover:not(.focus-visible) {
@@ -1847,19 +1828,19 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .header__top > .logo:not(.disabled):hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.header__top > .logo:not(.disabled).focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .header__top > .logo:not(.disabled):hover:not(.focus-visible) {
     opacity: 0.7;
   }
-}
-.header__top > .logo:not(.disabled).focus-visible:focus {
-  opacity: 0.7;
-}
-.header__top > .logo:not(.disabled).focus-visible:active {
-  opacity: 0.3;
-}
-.header__top > .logo:not(.disabled):focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (max-width: 1023px) {
   .header__top > .logo svg {
@@ -1897,19 +1878,19 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .header__button:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+}
+.header__button.focus-visible:focus:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .header__button:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-}
-.header__button.focus-visible:focus {
-  opacity: 0.7;
-}
-.header__button.focus-visible:active {
-  opacity: 0.3;
-}
-.header__button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
 }
 .header__button:focus-visible {
   outline: 2px solid #011c40;
@@ -2101,19 +2082,19 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .main-nav--header a:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.main-nav--header a.focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .main-nav--header a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-}
-.main-nav--header a.focus-visible:focus {
-  opacity: 0.7;
-}
-.main-nav--header a.focus-visible:active {
-  opacity: 0.3;
-}
-.main-nav--header a:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (max-width: 1023px) {
   .main-nav--header a {
@@ -2138,26 +2119,23 @@ button,
   }
 }
 @media (max-width: 767px) and (hover: hover) {
-  .main-nav--header a:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header a.focus-visible:focus {
-    opacity: 0.7;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header a.focus-visible:active {
-    opacity: 0.3;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header a:focus-visible {
+  .main-nav--header a:hover:not(.focus-visible):focus-visible {
     outline: 2px solid #011c40;
     outline-offset: 2px;
   }
 }
+@media (max-width: 767px) {
+  .main-nav--header a.focus-visible:focus:focus-visible {
+    outline: 2px solid #011c40;
+    outline-offset: 2px;
+  }
+}
+@media (max-width: 767px) and (hover: hover) {
+  .main-nav--header a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+
 .main-nav--footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2227,19 +2205,19 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .main-nav--footer a:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.main-nav--footer a.focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .main-nav--footer a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-}
-.main-nav--footer a.focus-visible:focus {
-  opacity: 0.7;
-}
-.main-nav--footer a.focus-visible:active {
-  opacity: 0.3;
-}
-.main-nav--footer a:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (max-width: 1023px) {
   .main-nav--footer a {
@@ -2863,20 +2841,21 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .cruises__detail a:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.cruises__detail a.focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .cruises__detail a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 }
-.cruises__detail a.focus-visible:focus {
-  opacity: 0.7;
-}
-.cruises__detail a.focus-visible:active {
-  opacity: 0.3;
-}
-.cruises__detail a:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
-}
+
 .contacts .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2991,20 +2970,21 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .contacts a:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #011c40;
+    outline-offset: 2px;
+  }
+}
+.contacts a.focus-visible:focus:focus-visible {
+  outline: 2px solid #011c40;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .contacts a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 }
-.contacts a.focus-visible:focus {
-  opacity: 0.7;
-}
-.contacts a.focus-visible:active {
-  opacity: 0.3;
-}
-.contacts a:focus-visible {
-  outline: 2px solid #011c40;
-  outline-offset: 2px;
-}
+
 .contacts li svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -3244,20 +3224,21 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .booking__form button[type=submit]:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.booking__form button[type=submit].focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .booking__form button[type=submit]:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 }
-.booking__form button[type=submit].focus-visible:focus {
-  opacity: 0.7;
-}
-.booking__form button[type=submit].focus-visible:active {
-  opacity: 0.3;
-}
-.booking__form button[type=submit]:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
-}
+
 .form form {
   width: 100%;
 }
@@ -3324,19 +3305,19 @@ button,
   transition: 0.2s ease opacity;
 }
 @media (hover: hover) {
+  .socials a:hover:not(.focus-visible):focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.socials a.focus-visible:focus:focus-visible {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
+@media (hover: hover) {
   .socials a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-}
-.socials a.focus-visible:focus {
-  opacity: 0.7;
-}
-.socials a.focus-visible:active {
-  opacity: 0.3;
-}
-.socials a:focus-visible {
-  outline: 2px solid #f9fbfd;
-  outline-offset: 2px;
 }
 @media (max-width: 1023px) {
   .socials a svg {
@@ -3401,26 +3382,23 @@ button,
   }
 }
 @media (max-width: 767px) and (hover: hover) {
-  .main-nav--header.no-js li a:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header.no-js li a.focus-visible:focus {
-    opacity: 0.7;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header.no-js li a.focus-visible:active {
-    opacity: 0.3;
-  }
-}
-@media (max-width: 767px) {
-  .main-nav--header.no-js li a:focus-visible {
+  .main-nav--header.no-js li a:hover:not(.focus-visible):focus-visible {
     outline: 2px solid #f9fbfd;
     outline-offset: 2px;
   }
 }
+@media (max-width: 767px) {
+  .main-nav--header.no-js li a.focus-visible:focus:focus-visible {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+@media (max-width: 767px) and (hover: hover) {
+  .main-nav--header.no-js li a:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+
 @media (max-width: 767px) {
   .header__button.no-js {
     display: none;
