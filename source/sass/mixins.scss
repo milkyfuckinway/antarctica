@@ -54,13 +54,17 @@
 
 @mixin default-states($outline-color: $color-default-white) {
   -webkit-tap-highlight-color: transparent;
-  transition: $trans-default opacity;
+  transition: $tf-linear 0.2s opacity;
 
   @include hover-focus {
     @include default-focus($outline-color);
   }
 
   @include hover {
+    opacity: 0.7;
+  }
+
+  &:active {
     opacity: 0.7;
   }
 }

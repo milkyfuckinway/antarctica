@@ -91,6 +91,7 @@
   left: 0;
   pointer-events: none;
   position: absolute;
+  -webkit-tap-highlight-color: transparent;
   top: 0;
   transition: $trans-default background-color;
   width: 100%;
