@@ -1,4 +1,4 @@
-mixin footer
+mixin socials
   -
     socialsLinks = [
       {
@@ -24,9 +24,8 @@ mixin footer
       },
     ]
 
-  footer.footer
-    .container
-      .main-nav.main-nav--footer
-        +logo()
-        +navigation()
-      +socials()
+  ul.socials
+    each item in socialsLinks
+      li
+        a(href=item.href aria-label=item.aria)
+          +icon(item.icon, item.iconwidth, item.iconheight)
