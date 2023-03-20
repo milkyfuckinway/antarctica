@@ -1021,9 +1021,9 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .btn--red {
   background-color: #ff1553;
@@ -1066,9 +1066,9 @@ button,
   outline: 2px solid transparent;
   outline-offset: 2px;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
   border: 0;
   color: #011c40;
   cursor: text;
@@ -1197,9 +1197,9 @@ button,
   outline: 2px solid transparent;
   outline-offset: 2px;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .custom-toggle:hover {
   opacity: 0.7;
@@ -1250,7 +1250,6 @@ button,
 .custom-toggle--checkbox input + .custom-toggle__icon {
   background-color: #f9fbfd;
   background-image: url("./../img/svg/custom-toggle-checkmark.svg");
-  background-position: center;
   background-position: -12px;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -1781,9 +1780,9 @@ button,
   pointer-events: none;
   position: absolute;
   top: 0;
-  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) background-color;
+  -webkit-transition: 0.2s ease background-color;
+  -o-transition: 0.2s ease background-color;
+  transition: 0.2s ease background-color;
   width: 100%;
 }
 
@@ -1802,17 +1801,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0, 1.45, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0, 1.45, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 1.45, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 1.45, 1, 1) transform;
+  transition: 0.4s cubic-bezier(0, 1.45, 1, 1) transform, 0.4s cubic-bezier(0, 1.45, 1, 1) -webkit-transform;
 }
 .header__top > .logo:not(.disabled) {
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .header__top > .logo:not(.disabled):hover {
   opacity: 0.7;
@@ -1855,9 +1854,9 @@ button,
   width: 40px;
   z-index: 100;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .header__button:hover {
   opacity: 0.7;
@@ -1891,11 +1890,11 @@ button,
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
-  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0, 2, 1, 1) width, 0.5s background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -webkit-transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color;
+  transition: 0.4s cubic-bezier(0, 2, 1, 1) transform, 0.4s cubic-bezier(0.5, 0, 0.5, 1.5) width, 0.2s ease background-color, 0.4s cubic-bezier(0, 2, 1, 1) -webkit-transform;
   width: 24px;
 }
 .header__button span::before, .header__button span::after {
@@ -1926,19 +1925,19 @@ button,
   background-color: #011c40;
   width: 0;
 }
-.header__top.is-open .header__button span::before {
+.header__top.is-open .header__button span::before, .header__top.is-open .header__button span::after {
   left: -3px;
+  width: 20px;
+}
+.header__top.is-open .header__button span::before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  width: 20px;
 }
 .header__top.is-open .header__button span::after {
-  left: -3px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 20px;
 }
 
 .header__bottom {
@@ -1974,9 +1973,9 @@ button,
 }
 
 .main-nav--transition {
-  -webkit-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
-  -o-transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
-  transition: 0.4s cubic-bezier(0, 2, 1, 1) max-width;
+  -webkit-transition: 0.4s cubic-bezier(0, 1.45, 1, 1) max-width;
+  -o-transition: 0.4s cubic-bezier(0, 1.45, 1, 1) max-width;
+  transition: 0.4s cubic-bezier(0, 1.45, 1, 1) max-width;
 }
 
 @media (max-width: 767px) {
@@ -2054,9 +2053,9 @@ button,
   font-weight: 500;
   line-height: 20px;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .main-nav--header a:hover {
   opacity: 0.7;
@@ -2085,9 +2084,9 @@ button,
     padding: 10px 10px 10px 8px;
     width: 240px;
     cursor: pointer;
-    -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-    -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-    transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+    -webkit-transition: 0.2s ease opacity;
+    -o-transition: 0.2s ease opacity;
+    transition: 0.2s ease opacity;
   }
   .main-nav--header a:hover {
     opacity: 0.7;
@@ -2163,9 +2162,9 @@ button,
   font-weight: 500;
   line-height: 20px;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .main-nav--footer a:hover {
   opacity: 0.7;
@@ -2706,11 +2705,11 @@ button,
   -webkit-transform: translateX(calc(-100% - 10px));
       -ms-transform: translateX(calc(-100% - 10px));
           transform: translateX(calc(-100% - 10px));
-  -webkit-transition: 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
-  transition: 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
-  -o-transition: 0.4s transform cubic-bezier(0, 1, 0, 1);
-  transition: 0.4s transform cubic-bezier(0, 1, 0, 1);
-  transition: 0.4s transform cubic-bezier(0, 1, 0, 1), 0.4s -webkit-transform cubic-bezier(0, 1, 0, 1);
+  -webkit-transition: 0.4s cubic-bezier(0, 1, 0, 1) -webkit-transform;
+  transition: 0.4s cubic-bezier(0, 1, 0, 1) -webkit-transform;
+  -o-transition: 0.4s cubic-bezier(0, 1, 0, 1) transform;
+  transition: 0.4s cubic-bezier(0, 1, 0, 1) transform;
+  transition: 0.4s cubic-bezier(0, 1, 0, 1) transform, 0.4s cubic-bezier(0, 1, 0, 1) -webkit-transform;
   width: 100%;
   z-index: 2;
 }
@@ -2787,9 +2786,9 @@ button,
   min-height: 40px;
   width: 100%;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .cruises__detail a:hover {
   opacity: 0.7;
@@ -2911,9 +2910,9 @@ button,
   font-weight: 400;
   line-height: 150%;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .contacts a:hover {
   opacity: 0.7;
@@ -3154,9 +3153,9 @@ button,
   padding: 0;
   width: 100%;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .booking__form button[type=submit]:hover {
   opacity: 0.7;
@@ -3225,9 +3224,9 @@ button,
   min-height: 25px;
   min-width: 25px;
   cursor: pointer;
-  -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-  transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+  -webkit-transition: 0.2s ease opacity;
+  -o-transition: 0.2s ease opacity;
+  transition: 0.2s ease opacity;
 }
 .socials a:hover {
   opacity: 0.7;
@@ -3280,9 +3279,9 @@ button,
 @media (max-width: 767px) {
   .main-nav--header.no-js li a {
     cursor: pointer;
-    -webkit-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-    -o-transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
-    transition: opacity 0.4s cubic-bezier(0, 2, 1, 1);
+    -webkit-transition: 0.2s ease opacity;
+    -o-transition: 0.2s ease opacity;
+    transition: 0.2s ease opacity;
     font-size: 14px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
