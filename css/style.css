@@ -2225,7 +2225,7 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   padding-top: 50px;
 }
 @media (max-width: 767px) {
