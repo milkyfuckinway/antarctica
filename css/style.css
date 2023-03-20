@@ -1081,6 +1081,28 @@ button,
   transition: outline, opacity 0.3s ease;
   width: 100%;
 }
+@media (hover: hover) {
+  .custom-input input:hover:not(.focus-visible), .custom-input textarea:hover:not(.focus-visible),
+.custom-textarea input:hover:not(.focus-visible),
+.custom-textarea textarea:hover:not(.focus-visible) {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+@media (hover: hover) {
+  .custom-input input:hover:not(.focus-visible), .custom-input textarea:hover:not(.focus-visible),
+.custom-textarea input:hover:not(.focus-visible),
+.custom-textarea textarea:hover:not(.focus-visible) {
+    outline: 2px solid #f9fbfd;
+    outline-offset: 2px;
+  }
+}
+.custom-input input.focus-visible:focus, .custom-input textarea.focus-visible:focus,
+.custom-textarea input.focus-visible:focus,
+.custom-textarea textarea.focus-visible:focus {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 2px;
+}
 .custom-input input::-webkit-input-placeholder, .custom-input textarea::-webkit-input-placeholder, .custom-textarea input::-webkit-input-placeholder, .custom-textarea textarea::-webkit-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
   font-size: 14px;
@@ -2870,20 +2892,19 @@ button,
 }
 
 .contacts__map {
-  height: 100%;
-  min-height: 306px;
+  height: 306px;
   min-width: 100px;
   width: 100%;
 }
 @media (max-width: 1023px) {
   .contacts__map {
-    min-height: 335px;
+    height: 335px;
     min-width: 324px;
   }
 }
 @media (max-width: 767px) {
   .contacts__map {
-    min-height: 316px;
+    height: 316px;
     min-width: 290px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
