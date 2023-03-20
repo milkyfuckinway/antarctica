@@ -143,8 +143,7 @@
   width: 40px;
   z-index: 10000;
 
-  @include default-states;
-  @include default-focus($color-tangaroa);
+  @include default-states($color-alice-blue);
 
   @include vp-767 {
     display: flex;
@@ -182,6 +181,8 @@
 }
 
 .header__top.is-open .header__button {
+  @include default-states($color-tangaroa);
+
   & span {
     background-color: $color-tangaroa;
     width: 0;
