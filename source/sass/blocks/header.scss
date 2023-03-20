@@ -108,7 +108,7 @@
 .header__top > .logo {
   color: $color-alice-blue;
   display: flex;
-  transition: $trans-default transform;
+  transition: $trans-stretch-light transform;
 
   &:not(.disabled) {
     @include default-states($color-alice-blue);
@@ -155,7 +155,7 @@
     left: 50%;
     position: relative;
     transform: translate(-50%);
-    transition: $trans-default transform, $trans-default width, 0.5s background-color;
+    transition: $trans-stretch-strong transform, $trans-stretch-light-easy-out width, $trans-default background-color;
 
     width: 24px;
 
@@ -166,7 +166,7 @@
       height: 2px;
       left: 0;
       position: absolute;
-      transition: $trans-default transform;
+      transition: $trans-stretch-strong transform;
       width: 24px;
     }
 
@@ -185,16 +185,18 @@
     background-color: $color-tangaroa;
     width: 0;
 
-    &::before {
+    &::before,
+    &::after {
       left: -3px;
-      transform: rotate(45deg);
       width: 20px;
     }
 
+    &::before {
+      transform: rotate(45deg);
+    }
+
     &::after {
-      left: -3px;
       transform: rotate(-45deg);
-      width: 20px;
     }
   }
 }

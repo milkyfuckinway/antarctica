@@ -15,10 +15,13 @@ $color-torch-red: #ff1553;
 
 $color-alice-blue: #f9fbfd;
 $color-tangaroa: #011c40;
+$color-solitude: #e3ecf6;
+$color-quartz: #d8d8d9;
 
 // Gradient
 
 $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$card-hover: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
 
 // Typography
 // ---------------------------------
@@ -37,12 +40,21 @@ $ff-placeholder: "Placeholder", "Arial", sans-serif;
 
 $tf-default: ease;
 $tf-linear: linear;
-$tf-bezier-stretch: cubic-bezier(0, 2, 1, 1);
+$tf-bezier-no-stretch: cubic-bezier(0, 1, 0, 1);
+$tf-bezier-stretch-strong: cubic-bezier(0, 2, 1, 1);
+$tf-bezier-stretch-medium: cubic-bezier(0, 1.75, 1, 1);
+$tf-bezier-stretch-light: cubic-bezier(0, 1.45, 1, 1);
+$tf-bezier-stretch-light-easy-out: cubic-bezier(0.5, 0, 0.5, 1.5);
 
-$trans-default: 0.4s $tf-bezier-stretch;
+$trans-default: 0.2s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-no-stretch: 0.4s $tf-bezier-no-stretch;
+$trans-stretch-strong: 0.4s $tf-bezier-stretch-strong;
+$trans-stretch-medium: 0.4s $tf-bezier-stretch-medium;
+$trans-stretch-light: 0.4s $tf-bezier-stretch-light;
+$trans-stretch-light-easy-out: 0.4s $tf-bezier-stretch-light-easy-out;
 
 $trans-600: 0.6s $tf-default;
 

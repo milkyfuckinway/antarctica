@@ -54,7 +54,7 @@
 
 @mixin default-states($outline-color: $color-default-white) {
   cursor: pointer;
-  transition: opacity $trans-default;
+  transition: $trans-default opacity;
 
   &:hover {
     opacity: 0.7;
