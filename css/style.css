@@ -2698,6 +2698,20 @@ button,
   height: 100%;
   line-height: 150%;
   margin: 0;
+  padding: 22px 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+@media (max-width: 1023px) {
+  .cruises h3 {
+    padding: 27px 35px;
+  }
+}
+@media (max-width: 767px) {
+  .cruises h3 {
+    padding: 18px 25px;
+  }
 }
 
 .cruises__list {
@@ -2720,7 +2734,8 @@ button,
 }
 @media (max-width: 767px) {
   .cruises__list {
-    grid-template-columns: repeat(auto-fill, 270px);
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2739,9 +2754,11 @@ button,
           transform: translate(0);
 }
 
-.cruises__preview,
-.cruises__preview img,
 .cruises__preview::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
+  background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  content: "";
   height: 100%;
   left: 0;
   position: absolute;
@@ -2749,30 +2766,11 @@ button,
   width: 100%;
 }
 
-.cruises__preview {
-  padding: 22px 30px;
-}
-.cruises__preview::after {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
-  background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
-  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
-  content: "";
-  z-index: -1;
-}
-@media (max-width: 1023px) {
-  .cruises__preview {
-    padding: 27px 35px;
-  }
-}
-@media (max-width: 767px) {
-  .cruises__preview {
-    padding: 18px 25px;
-  }
-}
-
 .cruises__preview img {
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
   z-index: -2;
 }
 
@@ -2788,9 +2786,9 @@ button,
           flex-direction: column;
   height: 100%;
   left: 0;
-  overflow: hidden;
+  overflow: auto;
   padding: 28px 25px 35px;
-  position: relative;
+  position: absolute;
   top: 0;
   -webkit-transform: translateX(calc(-100% - 10px));
       -ms-transform: translateX(calc(-100% - 10px));
