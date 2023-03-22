@@ -2605,7 +2605,7 @@ button,
   .advantages li {
     gap: 9px;
     min-height: 250px;
-    padding: 25px 20px 0;
+    padding: 25px 20px 20px;
   }
 }
 
@@ -2869,9 +2869,8 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  line-height: 150%;
+  line-height: 20px;
   margin-top: auto;
-  min-height: 40px;
   padding: 10px;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
