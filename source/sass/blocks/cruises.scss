@@ -38,6 +38,18 @@
   height: 100%;
   line-height: 150%;
   margin: 0;
+  padding: 22px 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  @include vp-1023 {
+    padding: 27px 35px;
+  }
+
+  @include vp-767 {
+    padding: 18px 25px;
+  }
 }
 
 .cruises__list {
@@ -55,7 +67,7 @@
   }
 
   @include vp-767 {
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -74,36 +86,22 @@
   }
 }
 
-.cruises__preview,
-.cruises__preview img,
-.cruises__preview::after {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 .cruises__preview {
-  padding: 22px 30px;
-
   &::after {
     background: $card-hover;
     content: "";
-    z-index: -1;
-  }
-
-  @include vp-1023 {
-    padding: 27px 35px;
-  }
-
-  @include vp-767 {
-    padding: 18px 25px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
 
 .cruises__preview img {
+  height: auto;
   object-fit: cover;
+  width: 100%;
   z-index: -2;
 }
 
@@ -114,9 +112,9 @@
   flex-direction: column;
   height: 100%;
   left: 0;
-  overflow: hidden;
+  overflow: auto;
   padding: 28px 25px 35px;
-  position: relative;
+  position: absolute;
   top: 0;
   transform: translateX(calc(-100% - 10px));
   transition: $trans-no-stretch transform;
